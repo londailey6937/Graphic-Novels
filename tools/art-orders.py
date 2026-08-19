@@ -25,6 +25,7 @@ TOL = TPL["tolerance"]
 EXC = TPL["exceptions"]
 PRINT = TPL.get("print", {})
 SHEETS = TPL.get("reference_sheets", {})
+MARKS = TPL.get("fixed_marks", [])
 LONG_EDGE = max(STD_W, STD_H)
 data = json.loads((ROOT / "script" / "act1.json").read_text())
 m, chars = data["meta"], data["characters"]
@@ -93,6 +94,66 @@ def refs_for(p):
     return out
 
 
+def project_instructions():
+    """The durable half of every prompt, assembled once. This goes in the ChatGPT
+    Project's custom instructions, not in the message -- so a per-panel order is
+    four lines instead of forty and cannot drift between panels by retyping."""
+    cast = "\n".join(f'\u2022 {k.upper()} \u2014 {v}' for k, v in chars.items())
+    marks = " \u00b7 ".join(MARKS) if MARKS else "(none declared)"
+    return f"""This project generates panels for a photoreal graphic novel. Every image
+request follows these rules.
+
+STYLE (applies to every image, never varies):
+{m["style_bible"]}
+
+REFERENCE CONVENTION: when images are attached, Image 1 is the CHARACTER SHEET and
+is the authority for identity \u2014 face, hairline, beard boundary, nose bridge, eye
+spacing, ear shape, build, wardrobe. Image 2 is the PREVIOUS SHOT and is the
+authority for state \u2014 light, wetness, dirt, wardrobe condition, object positions.
+Do not average them.
+
+CAST:
+{cast}
+
+FIXED MARKS, true in every image: {marks}
+
+NEVER restyle, idealize, or clean up a character. Never make them younger, thinner
+or more symmetrical. Never change hair length or beard shape.
+
+Default size {STD_W}x{STD_H} unless the request states otherwise."""
+
+
+def message_block(p, w, h, att):
+    """The per-panel half: what actually goes in the chat message, assuming the
+    project instructions above are loaded. Everything durable is already there."""
+    lines = []
+    if att:
+        lines += ["Same shoot, minutes later, different camera position. Not a new "
+                  "character.",
+                  "Image 1 = identity. Image 2 = previous shot, match its state.", ""]
+    if p.get("continuity"):
+        lines += [f'CONTINUITY: {p["continuity"]}', ""]
+    shot = p["prompt"]
+    if p.get("camera"):
+        shot = f'{p["camera"]} \u2014 {shot}'
+    lines += [f'SHOT: {shot}', "", f'Image size {w}x{h}.']
+    return "\n".join(lines)
+
+
+def standalone_block(p, w, h):
+    """Same order with the durable half inlined, for a chat with no project loaded."""
+    marks = (" Fixed marks: " + " \u00b7 ".join(MARKS) + "." ) if MARKS else ""
+    lead = ""
+    if p.get("continuity"):
+        c = p["continuity"]
+        lead = (" Image 1 is the character sheet and is the authority for identity; "
+                "image 2 is the previous shot and is the authority for state. "
+                + c[0].upper() + c[1:] + ("" if c.rstrip().endswith(".") else "."))
+    shot = f'{p["camera"]} \u2014 {p["prompt"]}' if p.get("camera") else p["prompt"]
+    return (f'{m["style_bible"]}{lead}{marks} Do not restyle, idealize or clean up the '
+            f'character. {shot} Image size {w}x{h}.')
+
+
 dpi_line = ""
 if PRINT:
     tw, th = PRINT["trim_in"]
@@ -112,6 +173,13 @@ if dpi_line:
     out += [dpi_line, ""]
 out += ["Panels whose slot is off-standard are flagged below; those are the ones to "
         "re-cut, not to re-render at an odd size.", ""]
+
+out += ["---", "", "## Project instructions — paste once", "",
+        "This is the durable half of every prompt. Paste it into the ChatGPT Project's "
+        "custom instructions and drop the reference sheets into the project files. "
+        "Every order below then needs only its own four lines, and the style, cast and "
+        "fixed marks cannot drift between panels by being retyped.", "",
+        "```", project_instructions(), "```", ""]
 
 # --- reference sheets: the likeness anchors every other order attaches ---
 if SHEETS:
@@ -158,15 +226,20 @@ for pg in data["pages"]:
                     f'{W2}×{H2}' + (f' — but that is {edge:.2f}:1, past the 3:1 cap, so it '
                     'can only arrive as a painted letterbox (see tools/debar.py).'
                     if edge > 3.0 else '.'), ""]
-        out += ["```", f'{m["style_bible"]} {p["prompt"]} Image size '
-                + (f'{STD_W}x{STD_H}' if not off else f'{gen_size(w,h)[0]}x{gen_size(w,h)[1]}')
-                + '.', "```"]
+        gw, gh = (STD_W, STD_H) if not off else gen_size(w, h)[:2]
         att = refs_for(p)
         if att:
-            out += ["", "Attach these images to the prompt, in this order:",
-                    *[f"- `{path}` — {why}" for path, why in att]]
-        if p.get("continuity"):
-            out += ["", f'Continuity: {p["continuity"]}']
+            out += ["Attach these images, in this order:",
+                    *[f"- `{path}` — {why}" for path, why in att], ""]
+        out += ["Paste into the message (project instructions carry the rest):", "",
+                "```", message_block(p, gw, gh, att), "```"]
+        if att and not p.get("camera"):
+            out += ["", "> No `camera` on this panel. Add one — a shot phrased as a move "
+                    "from the previous setup (\"camera now low at the waterline, facing "
+                    "him\") holds a face where a fresh description of the subject "
+                    "re-rolls it."]
+        out += ["", "<details><summary>Without a project loaded — full prompt</summary>",
+                "", "```", standalone_block(p, gw, gh), "```", "", "</details>"]
         if sheets:
             out += ["", "Consistency sheets in play:", *sheets]
         out.append("")

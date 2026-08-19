@@ -89,6 +89,27 @@ the negative that actually matters, because the model's instinct is to flatter:
 > Do not restyle him, do not idealize him, do not clean him up, do not make him
 > younger or more symmetrical. Three weeks unwashed.
 
+## What to paste where
+
+This document is the manual. **`build/art-orders.md` is what you paste from** —
+`art-orders.py` assembles both halves for you, so nothing here has to be retyped
+per panel.
+
+The prompt splits into a durable half and a per-shot half, and keeping them apart
+is most of the discipline:
+
+| | lives in | how often you paste it |
+|---|---|---|
+| style bible, cast, reference convention, fixed marks, default size | the **Project's custom instructions** | once |
+| continuity line, camera move, panel prompt, size | the **chat message**, with the two images attached | per panel |
+
+Retyping the durable half per panel is itself a drift source — a clause dropped in
+week three is a look changed in week three. Put it in the Project once and the
+per-panel order is four lines. `art-orders.py` prints the project block under
+**Project instructions — paste once**, and every panel order below it carries only
+its own four lines, with a `<details>` fallback holding the fully-inlined prompt for
+a chat with no Project loaded.
+
 ## Working in ChatGPT Plus specifically
 
 **Use a Project.** Create one for the book. Put the style bible in the project
@@ -136,11 +157,12 @@ Then wardrobe state.
 
 ## What the pipeline gives you
 
-Two optional fields per panel in `script/act1.json`:
+Three optional fields per panel in `script/act1.json`:
 
 ```json
 { "id": "4b", "area": "b",
   "prompt": "Close on WALT's cupped hands in cold creek water, his own reflection broken. His eyes have just lifted off the water toward something out of frame right.",
+  "camera": "Camera now low and close at the waterline, facing him",
   "refs": ["images/4a.png"],
   "continuity": "same man as 4a, same hour — three weeks of forest on him, wet to the forearms; the face is the sheet, not a new face." }
 ```
@@ -148,8 +170,15 @@ Two optional fields per panel in `script/act1.json`:
 - **`refs`** — previous panels this shot must match. `art-orders.py` prints them as
   an attachment list, flagging any that aren't rendered yet, which incidentally gives
   you the **render order**: a panel whose refs are missing is not ready to order.
-- **`continuity`** — the one sentence you paste under the prompt saying what carries
-  over. Written for a human to copy, not parsed.
+- **`continuity`** — one sentence on what carries over from the previous shot.
+- **`camera`** — the new setup, phrased as a move from the previous one. This is the
+  field that does layer 3's work. A panel with `refs` but no `camera` gets a warning
+  in the order, because describing the subject afresh is exactly what re-rolls the
+  face.
+
+And one list in `script/template.json`, `fixed_marks` — the checkable asymmetries,
+which `art-orders.py` folds into the project instructions so they ride on every
+prompt without being retyped.
 
 Act I's Walt panels are already chained this way: `4a → 4b → 5a → 6c → 7a → 8c →
 9b → 10b/10a → 11a → 11c/11d → 12a → 13a/13b`. Run `python3 tools/art-orders.py`

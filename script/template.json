@@ -1,25 +1,45 @@
 {
   "_": "Template standard shared by both builders. One art ratio, everywhere.",
   "art": {
-    "ratio": [4, 5],
-    "size": [2432, 3040],
+    "ratio": [
+      4,
+      5
+    ],
+    "size": [
+      2432,
+      3040
+    ],
     "label": "plate",
     "why": "A 4:5 page subdivides into n x n cells that are also 4:5 (drift <1%). No other subdivision of a 4:5 page holds the ratio, so 1, 4 or 9 panels per page is the whole grammar. One ratio means every render drops into any slot with no crop and no per-panel size bookkeeping.",
     "why_this_size": "2432x3040 is the largest exact 4:5 whose edges are both multiples of 16 (64n x 80n, n=38) and which clears 300dpi on the 8x10in trim: 304dpi both axes. 1920x2400, the old plate, was 240dpi -- fine on screen, short for print."
   },
   "print": {
-    "trim_in": [8, 10],
+    "trim_in": [
+      8,
+      10
+    ],
     "dpi": 304,
     "bleed_in": 0.125,
     "why": "8x10in is 4:5, so the trim, the page and the plate are all the same shape and a splash is full-bleed with zero crop. Bleed is cut off the plate, not added to it -- a 2432x3040 render already carries 38px of slop per edge at 304dpi."
   },
   "targets": {
     "min_width": 768,
-    "devices": ["tablet", "desktop"],
+    "devices": [
+      "tablet",
+      "desktop"
+    ],
     "why": "Phone is out of scope. At 402px a grid4 cell is 181px wide and a caption box covers half of it; the fixes all amount to a different reader (guided view, one panel at a time), not a CSS tweak. Tablet portrait (768px) is the floor both builders are tuned against."
   },
-  "page": { "w": 1600, "h": 2000, "gutter": 14 },
-  "grids": { "splash": 1, "grid4": 4, "grid9": 9 },
+  "page": {
+    "w": 1600,
+    "h": 2000,
+    "gutter": 14
+  },
+  "grids": {
+    "splash": 1,
+    "grid4": 4,
+    "grid9": 9
+  },
   "tolerance": 0.02,
   "reference_sheets": {
     "walt": "images/ref/walt-sheet.png",
@@ -27,6 +47,12 @@
     "band": "images/ref/band-sheet.png"
   },
   "reference_policy": "Likeness across panels comes from attaching a canonical reference render, not from re-describing the character. Generate each sheet once, keep it forever, attach it to every prompt that names its subject. See docs/likeness.md.",
+  "fixed_marks": [
+    "the band is on the LEFT wrist, always",
+    "Walt's sleeves are rolled, and the rig is on his belt, not a shoulder strap",
+    "the visitor has TWO ridges at the throat, not three"
+  ],
+  "fixed_marks_why": "Faces are hard to compare by eye; asymmetries are easy. These are the checkable fingerprints -- they cost one clause in the prompt and turn 'does this look like him?' into a yes/no check on delivery.",
   "exceptions": {
     "6c": "band 9.96:1 — delivered as a painted letterbox; page reshaped to suit it",
     "10a": "band 4.72:1 — delivered as a painted letterbox; page reshaped to suit it"

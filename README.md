@@ -291,15 +291,24 @@ creek bed in one panel comes back as a stranger when the next panel turns him to
 camera. The fix is a canonical reference *render* per character, attached to every
 prompt that names them, plus the previous panel when a shot has to match.
 
-`reference_sheets` in `script/template.json` names them, `art-orders.py` prints an
-**Attach these images** list on every order that needs one, and per-panel `refs` and
-`continuity` fields in `script/act1.json` carry shot-to-shot matching:
+`reference_sheets` and `fixed_marks` in `script/template.json` name the anchors;
+per-panel `refs`, `continuity` and `camera` fields in `script/act1.json` carry
+shot-to-shot matching:
 
 ```json
-{ "id": "5b", "area": "a",
-  "prompt": "WALT straightens and turns to face the camera...",
-  "refs": ["images/5a.png"],
-  "continuity": "same as 5a — left sleeve soaked to the elbow, mud on the right knee" }
+{ "id": "4b", "area": "b",
+  "prompt": "Close on WALT's cupped hands in cold creek water...",
+  "camera": "Camera now low and close at the waterline, facing him",
+  "refs": ["images/4a.png"],
+  "continuity": "same man as 4a, same hour — wet to the forearms; the face is the sheet" }
 ```
+
+`art-orders.py` splits the prompt into its durable and per-shot halves: a **Project
+instructions — paste once** block holding the style bible, cast, reference convention
+and fixed marks, then per panel an **Attach these images** list and a four-line
+message block. Retyping the durable half per panel is itself a drift source, so it
+gets pasted once and never again. A `<details>` fallback on each order carries the
+fully-inlined prompt for a chat with no Project loaded, and any panel with `refs` but
+no `camera` is flagged — describing the subject afresh is what re-rolls a face.
 
 The full workflow, written for ChatGPT Plus: **[docs/likeness.md](docs/likeness.md)**.
