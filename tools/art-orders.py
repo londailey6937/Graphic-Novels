@@ -4,6 +4,11 @@
 Every prompt is prefixed with the style bible and any character sheets it needs,
 because consistency across panels comes from repeating those two blocks verbatim
 -- not from remembering what you typed last time.
+
+Text sheets hold wardrobe and anatomy. They do not hold a *face*. So each order
+also names the reference images to attach alongside the prompt: the character's
+canonical sheet render, plus any earlier panel this one has to match. See
+docs/likeness.md for the ChatGPT workflow those attachments assume.
 """
 import json, re, sys
 from fractions import Fraction
@@ -18,6 +23,9 @@ STD_W, STD_H = TPL["art"]["size"]
 STD_R = TPL["art"]["ratio"][0] / TPL["art"]["ratio"][1]
 TOL = TPL["tolerance"]
 EXC = TPL["exceptions"]
+PRINT = TPL.get("print", {})
+SHEETS = TPL.get("reference_sheets", {})
+LONG_EDGE = max(STD_W, STD_H)
 data = json.loads((ROOT / "script" / "act1.json").read_text())
 m, chars = data["meta"], data["characters"]
 GUT = m.get("gutter", 14)
@@ -46,9 +54,9 @@ def slot_px(pg, area):
 COMMON = [(1,4),(1,3),(1,2),(2,3),(3,4),(4,5),(1,1),(5,4),(4,3),(3,2),(16,9),(2,1),(21,9),(3,1)]
 
 
-def gen_size(w, h, min_long=2400):
+def gen_size(w, h, min_long=LONG_EDGE):
     """A slot size gpt-image-2 will actually accept: edges multiples of 16px,
-    edge ratio <= 3:1, long edge >= 2400px so a print edition stays possible."""
+    edge ratio <= 3:1, long edge >= the standard plate's so print stays possible."""
     k = min_long / max(w, h)
     W, H = max(16, round(w * k / 16) * 16), max(16, round(h * k / 16) * 16)
     return W, H, max(W / H, H / W)
@@ -65,6 +73,33 @@ def ar(w, h):
 # which character sheets to append, by keyword in the prompt
 KEYS = {"walt": r"\bWALT\b|Walt", "visitor": r"visitor|alien", "band": r"\bband\b"}
 
+
+def subjects(prompt):
+    return [k for k, rx in KEYS.items() if re.search(rx, prompt)]
+
+
+def refs_for(p):
+    """Reference images to attach to this order, most authoritative first:
+    the canonical sheet for every subject named, then whatever earlier panels
+    the script says this one has to match."""
+    out = []
+    for k in subjects(p["prompt"]):
+        s = SHEETS.get(k)
+        if s and s not in out:
+            out.append((s, f"{k} — canonical likeness"
+                           + ("" if (ROOT / s).exists() else "  ⚠ not rendered yet")))
+    for r in p.get("refs", []):
+        out.append((r, "continuity" + ("" if (ROOT / r).exists() else "  ⚠ missing file")))
+    return out
+
+
+dpi_line = ""
+if PRINT:
+    tw, th = PRINT["trim_in"]
+    dpi_line = (f'That size is the print floor, not a preference: {STD_W}×{STD_H} on a '
+                f'{tw}×{th}in trim is {PRINT["dpi"]}dpi, so a full-bleed splash survives '
+                "the press. Screen builds downsample; nothing upsamples.")
+
 out = [f'# Art orders — {m["title"]}: {m["subtitle"]}', "",
        "**Style bible** (prepend to every prompt, unchanged):", "",
        f'> {m["style_bible"]}', "",
@@ -72,9 +107,33 @@ out = [f'# Art orders — {m["title"]}: {m["subtitle"]}', "",
        "One ratio for the whole book: a 4:5 page subdivides into n x n cells that are also "
        "4:5, so 1, 4 or 9 panels per page is the entire grammar and any render drops into "
        "any slot with no crop. Pass the size as the `size` parameter (API) or state it in "
-       "the prompt (ChatGPT).", "",
-       "Panels whose slot is off-standard are flagged below; those are the ones to "
-       "re-cut, not to re-render at an odd size.", "", "---", ""]
+       "the prompt (ChatGPT).", ""]
+if dpi_line:
+    out += [dpi_line, ""]
+out += ["Panels whose slot is off-standard are flagged below; those are the ones to "
+        "re-cut, not to re-render at an odd size.", ""]
+
+# --- reference sheets: the likeness anchors every other order attaches ---
+if SHEETS:
+    out += ["---", "", "## Reference sheets", "",
+            "Attach these to every order that names their subject. A text description "
+            "fixes wardrobe; only an image fixes a face. Generate each one once, at the "
+            "standard plate size, and never regenerate it — if a sheet drifts, every "
+            "panel made after it drifts with it. See [docs/likeness.md](../docs/likeness.md).", ""]
+    for k, path in SHEETS.items():
+        state = "**on file**" if (ROOT / path).exists() else "**not rendered**"
+        out += [f'### sheet `{k}` — `{path}` — {state}', ""]
+        if not (ROOT / path).exists():
+            out += ["```",
+                    f'{m["style_bible"]} Character reference sheet: {chars[k]} '
+                    "Neutral standing pose against the forest, three views in one frame — "
+                    "full front, three-quarter, and profile — even overcast light, no "
+                    "dramatic shadow hiding the face, consistent scale across the three. "
+                    f'Image size {STD_W}x{STD_H}.',
+                    "```", ""]
+    out += ["---", ""]
+else:
+    out += ["---", ""]
 
 todo = 0
 for pg in data["pages"]:
@@ -84,8 +143,7 @@ for pg in data["pages"]:
     out.append(f'## Page {pg["n"]} — section {pg["act"]}  ({pg["layout"]})')
     for p in rows:
         todo += 1
-        sheets = [f"- **{k}:** {chars[k]}" for k, rx in KEYS.items()
-                  if re.search(rx, p["prompt"])]
+        sheets = [f"- **{k}:** {chars[k]}" for k in subjects(p["prompt"])]
         w, h = slot_px(pg, p["area"])
         off = abs(w / h - STD_R) / STD_R > TOL
         note = ""
@@ -103,6 +161,12 @@ for pg in data["pages"]:
         out += ["```", f'{m["style_bible"]} {p["prompt"]} Image size '
                 + (f'{STD_W}x{STD_H}' if not off else f'{gen_size(w,h)[0]}x{gen_size(w,h)[1]}')
                 + '.', "```"]
+        att = refs_for(p)
+        if att:
+            out += ["", "Attach these images to the prompt, in this order:",
+                    *[f"- `{path}` — {why}" for path, why in att]]
+        if p.get("continuity"):
+            out += ["", f'Continuity: {p["continuity"]}']
         if sheets:
             out += ["", "Consistency sheets in play:", *sheets]
         out.append("")
@@ -112,5 +176,6 @@ for pg in data["pages"]:
 
 out += ["---", "", f"**{todo} panels outstanding.**"]
 dest = ROOT / "build" / "art-orders.md"
+dest.parent.mkdir(parents=True, exist_ok=True)
 dest.write_text("\n".join(out))
 print(f"wrote {dest.relative_to(ROOT)} · {todo} outstanding panels")

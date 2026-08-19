@@ -161,22 +161,26 @@ p em{font-style:italic;color:#fff}
 .orders .foot{max-width:44em;margin:-1rem 0 2rem;font:300 .84rem/1.7 var(--prose);
   color:var(--dim)}
 
-@media (max-width:1200px){ .rail{display:none} }
-@media (max-width:900px){
+/* Two device targets: tablet and desktop. Phone is out of scope — the prose
+   measure and the art column cannot both survive 402px, and the fix for that is a
+   different reader, not a breakpoint. Tablet portrait is the narrow floor. */
+@media (max-width:1024px){ .rail{display:none} }
+@media (max-width:1024px){
   .spread{display:flex;flex-direction:column;align-items:stretch;padding:0 7vw 14vh}
-  .art{order:-1;position:sticky;top:0;height:auto;padding:.7rem 0 .8rem;z-index:5;
+  .art{order:-1;position:sticky;top:0;height:auto;padding:.9rem 0 1rem;z-index:5;
     background:var(--paper);border-bottom:1px solid var(--rule);margin-bottom:2rem}
   .art.live .frame{position:static;display:none;opacity:1;visibility:visible;
     transition:none;margin:0;gap:.6rem}
   .art.live .frame.on{display:flex}
-  .art.live .frame img{flex:none;width:auto;max-width:100%;max-height:24vh;
+  .art.live .frame img{flex:none;width:auto;max-width:100%;max-height:40vh;
     height:auto;margin:0 auto}
-  body{font-size:18px;line-height:1.72}
+  body{font-size:19px;line-height:1.75}
   .masthead{padding:9vh 7vw 7vh}
   .orders{padding:0 7vw 12vh}
 }
 @media print{
-  body{background:#fff;color:#111}
+  body{background:#fff;color:#111;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
   .rail{display:none}
   .spread{display:block;max-width:34em}
   .art{position:static;height:auto}
@@ -344,8 +348,17 @@ def main():
              'family=IBM+Plex+Mono:wght@300;400;500&display=swap">')
     act = m["act"].split("—")[0].strip()
     head = f'<title>{esc(m["title"])} — {esc(act)}</title>{fonts}<style>{CSS}</style>'
+    pr = tpl.get("print", {})
     std = (f'One ratio throughout: every panel is {label} {stdw}×{stdh} '
            f'({tpl["art"]["ratio"][0]}:{tpl["art"]["ratio"][1]}).')
+    if pr:
+        tw, th = pr["trim_in"]
+        std += (f' That is {pr["dpi"]}dpi on an {tw}×{th}in trim — print resolution, '
+                'not screen resolution.')
+    tg = tpl.get("targets", {})
+    if tg:
+        std += (f' Built for {" and ".join(tg["devices"])}; '
+                f'{tg["min_width"]}px is the narrow floor.')
     page = (f'<nav class="rail" aria-label="Art anchors">{"".join(rail)}</nav>'
             f'<header class="masthead"><h1>{esc(m["title"])}</h1>'
             f'<div class="act">{esc(m["act"])}</div>'

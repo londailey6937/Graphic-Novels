@@ -17,8 +17,11 @@ print.
 
 ```
 script/story.json    the prose: sections -> blocks -> {text, art anchor}
-script/act1.json     the pages: pages -> panels -> {image, prompt, captions}
+script/act1.json     the pages: pages -> panels -> {image, prompt, captions, refs}
+script/template.json the one standard: art size, print trim/dpi, device targets
 images/              finished art, one file per panel id (e.g. 6a.png)
+images/ref/          canonical character sheets — the likeness authority
+docs/likeness.md     keeping a face the same face across panels (ChatGPT workflow)
 tools/read.py        prose + images -> build/read.html   (reading edition)
 tools/build.py       script + images -> build/index.html (panel edition)
 tools/art-orders.py  script -> build/art-orders.md (prompts for missing panels)
@@ -107,14 +110,15 @@ interrupting it. Its rules:
 - An **art-order appendix** closes the file: every anchored panel with section, size,
   state and full prompt, linked both ways with the inline marks.
 
-Within the panel edition, the caption grammar still holds: **1–3 panels per page**,
-never six, and anything over ~45 words wants its own panel or a `cc` beat block.
+Within the panel edition, the caption grammar still holds: **1, 4 or 9 panels per
+page** — the ratio grammar, now that the phone's 1–3 ceiling is gone — and anything
+over ~45 words wants its own panel or a `cc` beat block.
 
 ## The template standard: one ratio
 
 `script/template.json` holds it, and both builders read it.
 
-**Every panel is 1920×2400 (4:5).** The reason is arithmetic: a 4:5 page subdivides into
+**Every panel is 2432×3040 (4:5).** The reason is arithmetic: a 4:5 page subdivides into
 n×n cells that are *also* 4:5 — 1572×1972, 779×979, 514×648, all within 1% of 0.800.
 No other subdivision of a 4:5 page holds the ratio:
 
@@ -131,11 +135,24 @@ sequence that wants 3 beats becomes three splashes, not one three-panel page. Th
 the price of one ratio, and it buys: every render drops into any slot with no crop, no
 per-panel size bookkeeping, and no `--ar` to get wrong.
 
-`tools/art-orders.py` enforces it — every order reads `1920×2400`, and any slot outside
+`tools/art-orders.py` enforces it — every order reads `2432×3040`, and any slot outside
 2% tolerance is flagged **off-standard** with the instruction to re-cut the page rather
 than re-render at an odd size. Act I predates the standard, so 16 of its 24 outstanding
 panels are flagged; `exceptions` in `template.json` grandfathers the two bands whose art
 already exists and earns it.
+
+### Why that size and not a rounder one
+
+`2432×3040` is the largest **exact** 4:5 whose edges are both multiples of 16 — the
+family is `64n × 80n`, and `n=38` is the last term that generators still take. It is
+chosen from the print end, not the screen end: on the 8×10in trim declared in
+`template.json` it lands at **304dpi** on both axes, so a full-bleed splash goes to
+press with no upsampling and 38px of bleed slop per edge already in the file. The old
+plate, 1920×2400, was 240dpi on the same trim — fine on a screen, short for paper.
+
+Screen builds downsample from the plate; nothing ever upsamples. That is the whole
+reason the standard is defined once, in `script/template.json`, and read by both
+builders and the order generator rather than typed into prompts.
 
 ## Aspect ratios are computed, not guessed
 
@@ -157,8 +174,9 @@ generator left at its portrait default lands correctly in either.
 
 `gpt-image-2` takes any resolution in `size`, but only within **edge ratio ≤ 3:1 and
 edges that are multiples of 16px**. So `art-orders.py` doesn't just print a ratio — it
-scales each slot to a real generation size satisfying both, with the long edge at
-2400px so print stays possible, and flags any slot that can't be satisfied.
+scales each slot to a real generation size satisfying both, with the long edge at the
+standard plate's 3040px so print stays possible, and flags any slot that can't be
+satisfied.
 
 That check earns its keep: it caught two slots in the first draft of `hero45-plus-2`
 at 3.86:1 and 3.26:1, both ungeneratable. The layout's grid was re-solved to
@@ -198,39 +216,90 @@ One more rule the sliver taught: a caption box needs ~67px, so it covers 42% of 
 158px strip and lands straight on the eyes. Slivers stay silent — the line moves to
 the panel above.
 
-## Reading on a phone
+## Reading on tablet and desktop
+
+**Two device targets: tablet and desktop. Phone is out of scope.** `targets` in
+`script/template.json` states it, and both builders are tuned to that floor:
+**768px** (tablet portrait) is the narrowest viewport the book is designed to hold.
 
 The page is a fixed-ratio canvas, so it scales as one unit: `width: min(1600px, 100%)`
-with `aspect-ratio` owning the height. Measured at 402x874 (iPhone Pro logical
-viewport) the page lands at 402x503, exactly 0.800, no horizontal scroll, panel
-slots within 1.3% of their design ratios. `scroll-snap` gives page-at-a-time swiping.
+with `aspect-ratio` owning the height. `scroll-snap` gives page-at-a-time swiping.
 
 Type does not scale 1:1 — it can't. `--u` is one design pixel
 (`calc(100cqw / 1600)`), and every size is `max(floor, calc(N * var(--u)))`: faithful
-when there's room, readable when there isn't. A 15px caption would render at 3.5px on
-a phone if scaled honestly, so it floors at 11px, and below 760px captions widen from
-62% to 92% so prose spends the space horizontally instead of towering.
+when there's room, readable when there isn't. Below 1024px the caption measure widens
+from 62% to 78% so prose spends the space horizontally instead of towering.
 
-What that buys, at 402px:
+What the 768px floor gives a `grid4` page — the tightest case in the grammar. Cell
+sizes are the grid arithmetic; the caption-box share is the fraction of cell height a
+typical 20-word caption occupies at that width. The phone column is the measurement
+this file used to carry, kept as the reason the target was dropped:
 
-| page kind | verdict |
-|---|---|
-| splash (1 panel) | reads well — art fills, captions sit lightly |
-| 2-panel | fine |
-| 3-panel strip | tight but legible |
-| `grid4` (4 panels) | **fails** — captions cover ~54% of a 181px-wide cell |
+| | phone (402px, dropped) | tablet portrait (768px) | desktop (1600px) |
+|---|---|---|---|
+| page width | 402 | ~744 | 1600 |
+| `grid4` cell | 181×226 | ~362×453 | 779×979 |
+| caption type | 11px (floored from 3.5) | 11px (floored from 7.0) | 15px, faithful |
+| caption box | ~54% of the cell | ~13% of the cell | ~6% of the cell |
 
-So the 1–3 panels/page rule isn't a style preference, it's the phone constraint.
-Page 11 is the one page that breaks it and should split into two 2-panel pages for a
-phone edition. The alternative is guided view — one panel at a time, the way comic
-apps do it — which is a different reader, not a CSS tweak.
+That last row is the whole reason phone is gone. On a phone a caption box eats half
+the panel it sits on and there is no CSS that fixes it — the answer is guided view,
+one panel at a time the way comic apps do it, which is a different reader, not a
+breakpoint. On tablet the cell is twice the size and the caption sits lightly.
 
-## Page geometry
+Dropping the phone also resolves a contradiction this file used to carry: the
+template standard says the page grammar is **1, 4 or 9 panels**, while the caption
+grammar said **1–3 panels per page**. The second rule was never a style position —
+it was the phone constraint wearing one. With the phone gone, `grid4` is legal again
+and the two rules agree.
 
-Digital-first: **1600×2000 (4:5)**, matching the source render's aspect, so art
-fills a splash with zero crop and reads on a phone without pinching.
+The reading edition follows the same floor. Above 1024px it is a two-column spread —
+prose in a fixed ~33em measure, art sticky beside it — with the tick rail down the
+left. At or below 1024px (tablet portrait, and tablet landscape on smaller slates)
+the rail hides and the art becomes a pinned band above the prose, holding up to 40vh
+so an image is still an image and not a thumbnail.
 
-For a print edition, set `page_w`/`page_h` in `script/act1.json` to `1988×3075`
-(6.625×10.25in @300dpi, standard US comic trim) and re-render art at 2x. The
-`@page` rule in the print CSS derives its size from those numbers, so the PDF
-follows automatically. Add trim/bleed marks before sending to a printer.
+## Page geometry, and print
+
+Two numbers that used to be one. `page_w`/`page_h` in `script/act1.json` are
+**design units** — 1600×2000 (4:5), the coordinate system every `--u`-derived type
+size is written against. They are not inches and they are not the render size.
+
+The physical page is declared separately, in `print` in `script/template.json`:
+
+```json
+"print": { "trim_in": [8, 10], "dpi": 304, "bleed_in": 0.125 }
+```
+
+`build.py` reads that block for its `@page size`, so the PDF comes out at true 8×10in
+regardless of what the design units say. 8×10 is itself 4:5, so **trim, page and
+plate are all the same shape** — a splash is full-bleed with zero crop, and the
+2432×3040 plate lands at 304dpi across it.
+
+Bleed is *cut off* the plate rather than added to it: at 304dpi, 0.125in is 38px, and
+the plate already carries that much slop per edge. Add trim/bleed marks before
+sending to a printer.
+
+Both builders also set `print-color-adjust: exact`, because this is a dark book and
+the default is to drop the paper to white and print the art on a page it was never
+composed against.
+
+## Likeness across panels
+
+Text sheets fix wardrobe. They do not fix a face — which is why a man bent over a
+creek bed in one panel comes back as a stranger when the next panel turns him to
+camera. The fix is a canonical reference *render* per character, attached to every
+prompt that names them, plus the previous panel when a shot has to match.
+
+`reference_sheets` in `script/template.json` names them, `art-orders.py` prints an
+**Attach these images** list on every order that needs one, and per-panel `refs` and
+`continuity` fields in `script/act1.json` carry shot-to-shot matching:
+
+```json
+{ "id": "5b", "area": "a",
+  "prompt": "WALT straightens and turns to face the camera...",
+  "refs": ["images/5a.png"],
+  "continuity": "same as 5a — left sleeve soaked to the elbow, mud on the right knee" }
+```
+
+The full workflow, written for ChatGPT Plus: **[docs/likeness.md](docs/likeness.md)**.

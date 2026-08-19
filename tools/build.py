@@ -161,9 +161,12 @@ body{margin:0;background:#111314;color:var(--ink);
 .folio{position:absolute;right:var(--gutter);bottom:-24px;font:400 max(9px,calc(11*var(--u)))/1 var(--file);
   color:#5c6461;letter-spacing:.18em}
 .folio span{margin-right:12px;color:#43494a}
-@media (max-width:760px){
-  .cap{max-width:92%;line-height:1.38;letter-spacing:0}
-  .cap.emph,.cap[style*="-50% -50%"]{max-width:96%}
+/* Tablet portrait ({MINW}px) is the narrow floor this book is tuned to; phone is
+   out of scope. Below 1024px the caption measure widens so prose spends the space
+   horizontally instead of towering in a column two words wide. */
+@media (max-width:1024px){
+  .cap{max-width:78%;line-height:1.42}
+  .cap.emph,.cap[style*="-50% -50%"]{max-width:88%}
   .order p{font-size:max(10px,calc(13*var(--u)))}
 }
 .plate{width:var(--pw);max-width:100%;padding:6px 2px 0;color:#8f9997}
@@ -172,10 +175,15 @@ body{margin:0;background:#111314;color:var(--ink);
   text-transform:uppercase;color:var(--nettle)}
 .plate-stat{margin-top:12px;padding-top:12px;border-top:1px solid var(--rule);
   font:300 12px/1.6 var(--file);color:#727b79}
+/* Print: the trim comes from template.json, and the plate size is chosen to hit
+   {DPI}dpi across it, so a full-bleed splash is press-ready without upsampling.
+   Bleed is cut off the plate ({BLEED}in of slop per edge), not added to the page. */
 @media print{
   .plate{display:none}
   @page{size:{INW}in {INH}in;margin:0}
-  body{background:#fff;padding:0;gap:0;display:block}
+  body{background:#fff;padding:0;gap:0;display:block;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page,.panel,.cap{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   html{scroll-snap-type:none}
   .page{width:100%;height:100vh;aspect-ratio:auto;max-width:none;
     box-shadow:none;break-after:page}
@@ -198,11 +206,18 @@ def plate(data):
 def main():
     embed = "--embed" in sys.argv
     data = json.loads((ROOT / "script" / "act1.json").read_text())
+    tpl = json.loads((ROOT / "script" / "template.json").read_text())
     m = data["meta"]
+    # trim is declared in template.json; page_w/page_h are design units, not inches
+    pr = tpl.get("print", {})
+    inw, inh = pr.get("trim_in", [m["page_w"] / 200, m["page_h"] / 200])
     css = (CSS.replace("{PW}", str(m["page_w"])).replace("{PH}", str(m["page_h"]))
               .replace("{GUT}", str(m.get("gutter", 14)))
               .replace("{GUTVW}", f'{m.get("gutter",14)/m["page_w"]*100:.3f}')
-              .replace("{INW}", f'{m["page_w"]/200:.3f}').replace("{INH}", f'{m["page_h"]/200:.3f}'))
+              .replace("{MINW}", str(tpl.get("targets", {}).get("min_width", 768)))
+              .replace("{DPI}", str(pr.get("dpi", 200)))
+              .replace("{BLEED}", str(pr.get("bleed_in", 0.125)))
+              .replace("{INW}", f'{inw:.3f}').replace("{INH}", f'{inh:.3f}'))
     pages = "\n".join(page(p, m, embed) for p in data["pages"])
     done = sum(1 for p in data["pages"] for q in p["panels"] if q.get("image"))
     total = sum(len(p["panels"]) for p in data["pages"])
