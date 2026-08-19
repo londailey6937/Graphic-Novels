@@ -1,0 +1,17 @@
+{
+  "_": "Template standard shared by both builders. One art ratio, everywhere.",
+  "art": {
+    "ratio": [4, 5],
+    "size": [1920, 2400],
+    "label": "plate",
+    "why": "A 4:5 page subdivides into n x n cells that are also 4:5 (drift <1%). No other subdivision of a 4:5 page holds the ratio, so 1, 4 or 9 panels per page is the whole grammar. One ratio means every render drops into any slot with no crop and no per-panel size bookkeeping."
+  },
+  "page": { "w": 1600, "h": 2000, "gutter": 14 },
+  "grids": { "splash": 1, "grid4": 4, "grid9": 9 },
+  "tolerance": 0.02,
+  "exceptions": {
+    "6c": "band 9.96:1 — delivered as a painted letterbox; page reshaped to suit it",
+    "10a": "band 4.72:1 — delivered as a painted letterbox; page reshaped to suit it"
+  },
+  "exception_policy": "Bands are grandfathered where the art already exists and earns it. New art is 4:5. tools/art-orders.py warns on any slot outside tolerance that is not listed here."
+}

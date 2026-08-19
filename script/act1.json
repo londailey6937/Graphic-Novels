@@ -1,0 +1,508 @@
+{
+  "meta": {
+    "title": "What the Forest Kept",
+    "subtitle": "Act I — Contact",
+    "byline": "Lon Dailey",
+    "page_w": 1600,
+    "page_h": 2000,
+    "style_bible": "Photoreal cinematic realism, Olympic temperate rainforest, overcast diffuse light, desaturated blue-green palette, deep shadow, wet stone and nettle, no lens flare, no text in image, natural film grain. Fill the entire frame edge to edge at the stated size: no letterbox bars, no black borders, no matte.",
+    "gutter": 14
+  },
+  "characters": {
+    "walt": "Man, late 50s, weathered, curly grey-black hair, short grey beard, dirty olive work shirt with rolled sleeves, dark suspenders, canvas trousers, leather belt rig. Three weeks unwashed.",
+    "visitor": "Emaciated humanoid, 6ft, grey-green iridescent skin with pale marbled filigree under the surface, elongated cranial ridge sweeping back, two ridges at the throat, large dark eyes, long thin limbs, brass-toned band on left wrist.",
+    "band": "Wrist band: a ring of fused brass-toned thorns and root-like filigree around a single pale opalescent stone. Fine dark violet-black filaments trail from beneath it. Up close the surface is matte and faintly damp, the color of a healed bruise -- not metal, whatever it looks like from a distance. Moves slowly, reluctantly, like something that badly does not want to be cold."
+  },
+  "pages": [
+    {
+      "n": 1,
+      "act": "TITLE",
+      "layout": "splash",
+      "panels": [
+        {
+          "id": "1a",
+          "area": "a",
+          "prompt": "Looking straight up through a dense old-growth Douglas fir canopy at dusk. Black trunks converging. One small unnatural streak of light crossing the gap of sky between the crowns. Rain in the air.",
+          "focal": "50% 40%",
+          "captions": []
+        }
+      ],
+      "title_card": true
+    },
+    {
+      "n": 2,
+      "act": "I",
+      "layout": "row3-tall",
+      "panels": [
+        {
+          "id": "2a",
+          "area": "a",
+          "prompt": "Extreme close on a monochrome radar display, a mass on an impossible deceleration curve, phosphor green, operator's face reflected faint in the glass.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "Three radar stations logged it within the same eleven minutes: a mass entering atmosphere on a decel curve no debris follows and no aircraft survives."
+            }
+          ]
+        },
+        {
+          "id": "2b",
+          "area": "b",
+          "prompt": "A windowless briefing room, fluorescent, four men in shirtsleeves standing over a topographic map, arguing. No faces clear. Cigarette haze.",
+          "focal": "50% 45%",
+          "captions": [
+            {
+              "pos": "bl",
+              "text": "By the time the analysts at three separate agencies had stopped arguing about whose desk it belonged on, it was down — and gone from every scope that had been watching it."
+            }
+          ]
+        },
+        {
+          "id": "2c",
+          "area": "c",
+          "prompt": "Night. Unmarked trucks and generator lights massed at a forest tree line, headlights into fog, silhouetted figures unloading. Seen from inside the trees looking out.",
+          "focal": "50% 55%",
+          "captions": [
+            {
+              "pos": "tr",
+              "text": "Within six hours there were trucks at the tree line and a no-fly order over half a county."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "act": "I",
+      "layout": "splash",
+      "panels": [
+        {
+          "id": "3a",
+          "area": "a",
+          "prompt": "Aerial wide of eight miles of unbroken Olympic rainforest under low cloud, ridgeline after ridgeline, no roads, no clearing, one meadow barely visible far off. Cold grey-green.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tc",
+              "text": "Not *what is it*, but *what does it want, and how fast can we get there first.*"
+            },
+            {
+              "pos": "bc",
+              "text": "They had eight miles of forest to search. They did not know yet that they were looking for a hill.",
+              "emph": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "act": "II",
+      "layout": "stack2",
+      "panels": [
+        {
+          "id": "4a",
+          "area": "a",
+          "prompt": "WALT walking a creek bed alone, small in frame, three weeks of forest on him, pack low on his hips. Water over stone in the foreground.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "Walt found the creek before he found anything else — water over stone, a small, ordinary music —"
+            }
+          ]
+        },
+        {
+          "id": "4b",
+          "area": "b",
+          "prompt": "Close on WALT's cupped hands in cold creek water, his own reflection broken. His eyes have just lifted off the water toward something out of frame right.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "br",
+              "text": "— and it was there, kneeling to drink, that he saw the shape half-fallen into a bank of stinging nettle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "act": "II",
+      "layout": "splash",
+      "panels": [
+        {
+          "id": "5a",
+          "area": "a",
+          "image": "images/b7804011-5940-40d7-8ff5-1387bafc030b.png",
+          "prompt": "THE DISCOVERY. Walt kneeling in wet stone at left, the visitor half-fallen into nettle at right, brass band on its wrist. High three-quarter angle.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "Grey-green skin going ash at the fingers."
+            },
+            {
+              "pos": "br",
+              "text": "A throat with two ridges where a throat should have one."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "act": "II",
+      "layout": "hero-plus-strip",
+      "panels": [
+        {
+          "id": "6a",
+          "area": "a",
+          "prompt": "Macro on the visitor's outflung hand and wrist band. Dark filaments unspooled from beneath the band, trailing across wet stone, gone still. Nettle around.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "And already, even as he watched, small dark filaments unspooling from a band at its wrist and going still again, like something that had tried to move and given up."
+            },
+            {
+              "pos": "bl",
+              "text": "The alien did not wake."
+            }
+          ],
+          "image": "images/1c52ad28-fee0-441c-9409-b1dfaaa4d4f5.png"
+        },
+        {
+          "id": "6c",
+          "area": "c",
+          "prompt": "Extreme wide letterbox: WALT's eyes at left, the visitor's cranial ridge sweeping across the right foreground. He is watching it over its own head.",
+          "focal": "50% 50%",
+          "captions": [],
+          "image": "images/6c.png"
+        }
+      ],
+      "reserve": [
+        {
+          "id": "6b",
+          "area": "b",
+          "prompt": "Tall narrow vertical crop: the visitor's throat, two parallel ridges under iridescent skin, barely moving. Framing is a thin vertical slice, top to bottom.",
+          "focal": "50% 50%",
+          "captions": [],
+          "note": "cut when page 6 was reshaped for the 9.97:1 eyes strip; beat covered by page 5"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "act": "II",
+      "layout": "stack2-silent",
+      "panels": [
+        {
+          "id": "7a",
+          "area": "a",
+          "prompt": "Night. Walt sitting with his back to a mossed log, the body a pale shape two feet away in the nettles. Almost no light. Almost no detail.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "Somewhere past midnight its breathing went from labored to shallow to nothing."
+            }
+          ]
+        },
+        {
+          "id": "7b",
+          "area": "b",
+          "black": true,
+          "prompt": "Pure black panel. No art.",
+          "captions": [
+            {
+              "pos": "cc",
+              "text": "— and Walt sat with the body in a silence too complete for any forest he'd walked through in three weeks of walking.",
+              "emph": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "act": "II",
+      "layout": "strip3",
+      "panels": [
+        {
+          "id": "8a",
+          "area": "a",
+          "prompt": "The band, loose, lying in wet dirt beside a dead grey-green hand. First light.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "The band did not wait for permission."
+            }
+          ]
+        },
+        {
+          "id": "8b",
+          "area": "b",
+          "prompt": "Ground-level macro: the band mid-crawl across two feet of wet dirt and pebbles, leaving a faint wet track. Unhurried.",
+          "focal": "50% 50%",
+          "captions": []
+        },
+        {
+          "id": "8c",
+          "area": "c",
+          "prompt": "The band arriving at the edge of Walt's boot and bare ankle. He has not moved.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "br",
+              "text": "It came loose from a dead wrist and began, unhurried, to cross the two feet of dirt between one body and the next."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "act": "III",
+      "layout": "stack2",
+      "panels": [
+        {
+          "id": "9a",
+          "area": "a",
+          "prompt": "Extreme macro of the band's surface: matte, faintly damp, the color of a healed bruise. Not metal. Almost organic. Filling frame.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "Up close it was not metal. Metal was the wrong thought entirely — Walt only had that word ready because no other word fit better."
+            }
+          ]
+        },
+        {
+          "id": "9b",
+          "area": "b",
+          "prompt": "Walt's forearm and open hand, the band a half inch away from the thin skin over his radial pulse. Held still, like a hand near a fire.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "br",
+              "text": "It wasn't reaching for his wrist so much as it was *reaching for his warmth* — the way a hand reaches toward a fire, indifferent to whose fire it is."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "act": "III",
+      "panels": [
+        {
+          "id": "10b",
+          "area": "b",
+          "prompt": "Extreme macro filling the frame: the band's edge entering the skin over the radial pulse of WALT's wrist. A seam, a give. Going *in*, not around. Wet, precise, no blood yet.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "The first touch was not painful. It was intimate in a way that made his skin want to be somewhere else."
+            },
+            {
+              "pos": "bl",
+              "text": "He did not scream. He made a sound that had no ancestry in language at all."
+            }
+          ]
+        },
+        {
+          "id": "10a",
+          "area": "a",
+          "prompt": "Wide anamorphic band: WALT on his knees at left, head thrown back, mouth open on a sound that is not a word. The visitor's body lies across the right of frame. Empty wet forest floor between them.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "br",
+              "text": "The pain arrived a full two seconds behind the fact of it, the way thunder arrives behind lightning: the body always the last to be informed.",
+              "emph": true
+            }
+          ],
+          "image": "images/10a.png"
+        }
+      ],
+      "grid": {
+        "rows": "4.88fr 1fr",
+        "cols": "1fr",
+        "areas": {
+          "b": [
+            1,
+            1,
+            2,
+            2
+          ],
+          "a": [
+            2,
+            1,
+            3,
+            2
+          ]
+        }
+      },
+      "layout": "grid:10"
+    },
+    {
+      "n": 11,
+      "act": "IV",
+      "layout": "grid4",
+      "panels": [
+        {
+          "id": "11a",
+          "area": "a",
+          "prompt": "Walt curled on wet ground, sweating, eyes open, pupils wrong. Close.",
+          "focal": "50% 45%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "For an hour he could feel it *deciding things.*"
+            }
+          ]
+        },
+        {
+          "id": "11b",
+          "area": "b",
+          "prompt": "Interior of an empty wooden house, wind moving through it, doors ajar down a hallway. Dreamlike, not literal. Weather indoors.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tr",
+              "text": "Not thoughts — nothing so orderly. More like weather moving through a house, testing which doors were unlocked."
+            }
+          ]
+        },
+        {
+          "id": "11c",
+          "area": "c",
+          "prompt": "Macro of Walt's inner forearm: a fine pale thread laying itself down alongside the vein, under the skin. Patient. Like ivy on a wall.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "bl",
+              "text": "Not warming *itself* so much as *building* the means to stay warm — patient, the way ivy is patient with a wall."
+            }
+          ]
+        },
+        {
+          "id": "11d",
+          "area": "d",
+          "prompt": "Walt on hands and knees having been sick, twice, head hanging, double-exposure blur suggesting doubled vision.",
+          "focal": "50% 40%",
+          "captions": [
+            {
+              "pos": "br",
+              "text": "His vision, for about four minutes, doubled and would not uncross."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "act": "IV",
+      "layout": "stack2",
+      "panels": [
+        {
+          "id": "12a",
+          "area": "a",
+          "prompt": "Walt sitting up, exhaled, slack, dawn behind him. The moment after. Nothing dramatic left in his face.",
+          "focal": "50% 40%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "And then, all at once, it stopped being an invasion and became something closer to a held breath let out."
+            }
+          ]
+        },
+        {
+          "id": "12b",
+          "area": "b",
+          "prompt": "Macro of his wrist. No wound. Only faint marbling under the skin, like a bruise seen through water, already fading toward invisible.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "br",
+              "text": "When he looked, there was no wound.",
+              "emph": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 13,
+      "act": "V",
+      "layout": "row3-tall",
+      "panels": [
+        {
+          "id": "13a",
+          "area": "a",
+          "prompt": "Walt's untouched food in his open pack, rations still sealed, days of them. He isn't looking at it.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "He needed less food and did not miss it."
+            }
+          ]
+        },
+        {
+          "id": "13b",
+          "area": "b",
+          "prompt": "Walt standing motionless, head slightly turned, listening. Two ridgelines behind him in mist, tiny figures of a search team barely resolvable.",
+          "focal": "50% 45%",
+          "captions": [
+            {
+              "pos": "tc",
+              "text": "He could parse individual voices from a search team two ridgelines away — though he had no context yet for why there would be a search team at all."
+            }
+          ]
+        },
+        {
+          "id": "13c",
+          "area": "c",
+          "prompt": "Forest foliage rendered in oversaturated separating color channels, RGB fringing, a half-second ahead of itself.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "br",
+              "text": "Colors arrived a half-second before he consciously registered seeing them. The world had the quality of a film very slightly out of sync with its own sound."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "act": "VI",
+      "layout": "splash",
+      "panels": [
+        {
+          "id": "14a",
+          "area": "a",
+          "prompt": "A meadow where the grass grows too even. A low broad hill in the center of it, forty yards wide, grass-covered — and it is BREATHING, risen mid-inhale. Walt small at the tree line, back to us. Birds absent. Overcast.",
+          "focal": "50% 50%",
+          "captions": [
+            {
+              "pos": "tl",
+              "text": "What he found there was not a ship in the shape ships are supposed to have. It was a hill that breathed."
+            },
+            {
+              "pos": "br",
+              "text": "Three separate trucks were closing the same eight-mile radius, following instruments that had no idea they were tracking something that had already decided, long before any of them arrived, exactly who it had come to keep.",
+              "emph": true
+            }
+          ]
+        }
+      ],
+      "end_card": "ACT II — ACCLIMATION"
+    }
+  ]
+}
