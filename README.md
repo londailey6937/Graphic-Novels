@@ -1,33 +1,61 @@
-# What the Forest Kept — graphic novel build
+# What the Forest Kept — and the pipeline that builds it
 
-A text-plus-image pipeline. The script is data; the pages are generated. You never
-hand-place a caption box in Photoshop and you never re-flow 14 pages because one
-line of prose got longer.
+Drop a story in. Get a graphic novel out.
 
-There are two editions, built from two scripts over one set of images.
-
-**Reading edition** — `script/story.json` -> `tools/read.py` -> `build/read.html`.
-The prose runs continuously in a single measure; art is anchored to the paragraph it
-belongs to and holds in a synced column until the next anchor replaces it. This is the
-one to read the story in.
-
-**Panel edition** — `script/act1.json` -> `tools/build.py` -> `build/index.html` and
-the PDF. Composed comic pages with caption boxes over the art. This is the one to
-print.
-
+```sh
+python3 tools/ingest.py   stories/my-story.md          # story -> script skeleton
+#   ... an AI pass places the art anchors and writes the orders ...
+python3 tools/coverage.py script/my-story.json         # what still needs art
+python3 tools/read.py     script/my-story.json         # the reading edition
+python3 tools/build.py                                 # the panel edition + PDF
 ```
-script/story.json    the prose: sections -> blocks -> {text, art anchor}
-script/act1.json     the pages: pages -> panels -> {image, prompt, captions, refs}
+```
+stories/             drop stories here (.md or .txt)
+script/<slug>.json   one script per story: meta, sections -> blocks, panels
 script/template.json the one standard: art size, print trim/dpi, device targets
-images/              finished art, one file per panel id (e.g. 6a.png)
+images/              finished art, one file per panel id (e.g. p03.png)
 images/ref/          canonical character sheets — the likeness authority
 docs/likeness.md     keeping a face the same face across panels (ChatGPT workflow)
+tools/ingest.py      story -> script skeleton
+tools/coverage.py    audits art coverage; requests what's missing
 tools/read.py        prose + images -> build/read.html   (reading edition)
 tools/build.py       script + images -> build/index.html (panel edition)
 tools/art-orders.py  script -> build/art-orders.md (prompts for missing panels)
 tools/export-pdf.sh  build -> print-ready PDF, one comic page per PDF page
 tools/debar.py       strip painted letterbox bars off a render, file it as a panel
 ```
+
+`ingest.py` parses. `coverage.py` audits. The judgment in the middle — *where* a picture
+belongs and *what* it should show — is the one step that isn't a parse, and it is the
+step the whole thing exists to support.
+
+`script/story.json` and `script/act1.json` are the earlier draft of this story, kept for
+the panel-edition page layouts. New work goes through `script/<slug>.json`.
+
+## What coverage.py actually checks
+
+Four questions, ordered by how badly a wrong answer hurts:
+
+1. **Is any stretch of prose running without a picture?** Over 150 words between
+   anchors and it prints `REQUEST ART` with the paragraph range and its opening line.
+2. **Does every section have at least one picture?** A section with none is flagged.
+3. **Could a child follow the story from the pictures alone?** This is the one worth
+   spelling out. A picture sequence only carries a story if each frame has somebody in
+   it doing something. An order naming no actor is an establishing shot — fine alone,
+   fatal in a run: two in a row and a reader following only the pictures loses the
+   thread. That gets flagged, and the report prints **the story as pictures only**, the
+   ordered list of every panel's first sentence, so you can read the picture-story
+   straight through and see for yourself whether it holds.
+4. **Which orders are still unrendered?** That's the worklist.
+
+It also paginates under the template grammar and flags any page holding a count the
+grammar doesn't allow. Exit code is 1 on anything blocking, so it can gate a build.
+
+Placing 24 panels in this story, the audit caught two things a read-through hadn't:
+a 3-panel and a 2-panel page that the 1/4/9 grammar forbids, and — chasing the fix —
+two beats with no picture at all: the morning Walt checks his wrist to see if the band
+has been taken back, and the chord of hundreds of kept lives with his new note in it.
+Both are now panels. **The pagination constraint found the missing images.**
 
 ## The loop
 

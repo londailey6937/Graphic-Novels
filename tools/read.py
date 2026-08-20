@@ -25,15 +25,11 @@ def markup(s):
     return re.sub(r"\*(.+?)\*", r"<em>\1</em>", esc(s))
 
 
-def panel_index():
-    """panel id -> {image, prompt, page}. Shared with the panel-edition build."""
-    d = json.loads((ROOT / "script" / "act1.json").read_text())
-    out = {}
-    for pg in d["pages"]:
-        for p in pg["panels"] + pg.get("reserve", []):
-            out[p["id"]] = {"image": p.get("image"), "prompt": p.get("prompt", ""),
-                            "page": pg["n"]}
-    return out
+def load_script():
+    """One script per story: meta, sections/blocks, and the panels they anchor."""
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    path = Path(args[0]) if args else ROOT / "script" / "what-the-forest-kept.json"
+    return json.loads(path.read_text()), path
 
 
 def embed_img(rel):
@@ -251,10 +247,10 @@ JS = """
 
 def main():
     embed = "--embed" in sys.argv
-    story = json.loads((ROOT / "script" / "story.json").read_text())
+    story, spath = load_script()
     tpl = json.loads((ROOT / "script" / "template.json").read_text())
     m = story["meta"]
-    idx = panel_index()
+    idx = story["panels"]
     stdw, stdh = tpl["art"]["size"]
     label = tpl["art"]["label"]
     exc = tpl["exceptions"]
@@ -265,7 +261,7 @@ def main():
         for b in sec["blocks"]:
             pid = b.get("art")
             if pid and not any(s["id"] == pid for s in seq):
-                info = idx.get(pid, {"image": None, "prompt": "", "page": None})
+                info = idx.get(pid, {"image": None, "prompt": "", "role": "quad"})
                 seq.append({"id": pid, "sec": sec["n"], **info})
     drawn = [s for s in seq if s["image"]]
 
@@ -294,12 +290,13 @@ def main():
             body.append(
                 f'<div class="{cls}" id="beat-{pid}" data-panel="{pid}"{artattr}>'
                 f'<div class="mark">{order_link(s)}'
-                f'<span class="size">{label} {size}</span>'
+                f'<span class="state">{esc(s.get("role","quad"))}</span>'
+                f'<span class="size">{size}</span>'
                 f'<span class="state">{state}</span>{note}</div>'
                 f'<p>{markup(b["text"])}</p></div>')
         body.append("</section>")
-    body.append(f'<p class="coda">[ {esc(m["continued"])} ]</p>')
-
+    if m.get("continued"):
+        body.append(f'<p class="coda">[ {esc(m["continued"])} ]</p>')
     # --- art column -----------------------------------------------------------
     art = []
     for i, s in enumerate(drawn, 1):
@@ -331,7 +328,7 @@ def main():
                     f'<td class="size">{stdw}×{stdh}</td>'
                     f'<td class="st">{st}</td>'
                     f'<td class="pr">{esc(s["prompt"])}</td></tr>')
-    total_panels = len([1 for k, v in idx.items()])
+    total_panels = len(idx)
     foot = ""
     if total_panels != len(seq):
         foot = (f'<p class="foot">{len(seq)} of the panel edition\u2019s {total_panels} '
@@ -346,8 +343,9 @@ def main():
     fonts = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
              'family=Spectral:ital,wght@0,200;0,300;0,400;1,300;1,400&'
              'family=IBM+Plex+Mono:wght@300;400;500&display=swap">')
-    act = m["act"].split("—")[0].strip()
-    head = f'<title>{esc(m["title"])} — {esc(act)}</title>{fonts}<style>{CSS}</style>'
+    act = (m.get("act") or "").split("\u2014")[0].strip()
+    head = (f'<title>{esc(m["title"])}' + (f' \u2014 {esc(act)}' if act else '')
+            + f'</title>{fonts}<style>{CSS}</style>')
     pr = tpl.get("print", {})
     std = (f'One ratio throughout: every panel is {label} {stdw}×{stdh} '
            f'({tpl["art"]["ratio"][0]}:{tpl["art"]["ratio"][1]}).')
@@ -361,7 +359,8 @@ def main():
                 f'{tg["min_width"]}px is the narrow floor.')
     page = (f'<nav class="rail" aria-label="Art anchors">{"".join(rail)}</nav>'
             f'<header class="masthead"><h1>{esc(m["title"])}</h1>'
-            f'<div class="act">{esc(m["act"])}</div>'
+            + (f'<div class="act">{esc(m["act"])}</div>' if m.get("act") else '')
+            +
             f'<div class="by">{esc(m["byline"])}</div>'
             f'<div class="std">{esc(std)}</div><div class="rule"></div></header>'
             f'<main class="spread"><div class="prose">{"".join(body)}</div>'
