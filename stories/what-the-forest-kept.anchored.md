@@ -21,15 +21,17 @@ bottom. Never skip, add or reorder one. For each: write the order (SHOT / CAMERA
 
 - **WALT** — Man, late 50s, weathered and gaunt, curly grey-black hair, short grey beard, dirty olive work shirt with rolled sleeves, dark suspenders, canvas trousers. Three weeks unwashed in the woods. Carries almost nothing.
 - **VISITOR** — Tall gaunt humanoid, 6ft, unmistakably adult and unmistakably not human. Head, hands and feet bare; grey-green iridescent skin going ash at the fingers and toes, deeply creased and coarsely textured like weathered stone or dried kelp — never smooth, never youthful, never doll-like. Elongated cranial ridge sweeping back from the brow, two ridges at the throat, a mouth built slightly wrong, eyes large and dark and set deep in heavy sockets. Long thin limbs. From collarbone to ankle it wears a close-fitting dark travel membrane, matte and faintly ridged, like wet slate — not cloth and not skin. It is covered below the neck in every image.
-- **BAND** — A plain silver band, unornamented, at the VISITOR's left wrist. It opens along a seam that was not visible before. Worn on WALT it sits close to the skin and catches light like water.
+- **BAND** — A silver cuff, close-fitting and softly rounded, with a row of small raised studs around its circumference. Worn on the VISITOR's LEFT wrist, and afterwards on WALT's LEFT wrist. It opens along a seam that was not visible before, and catches light like water.
 - **KEEPER** — Never a face. A presence rendered as warm layered light and shifting pressure in the air, filling a space the way weather fills a valley.
 - **KEPT** — A gallery of beings from many worlds, none human, none alike — some upright, some coiled, some barely more than light held in a shape. All calm. All at home.
 - **SHIP** — Not a hull. A low broad rise in a meadow, grass grown thick across curves too smooth for hillside, moss in patterns too even to be moss.
 - **AGENTS** — Unmarked vehicles, generator lights, silhouetted men with rifles and clipboards at a forest tree line. Faces never clear.
+- **WATCH** — WALT wears an old analogue wristwatch with a round face on his RIGHT wrist — never the left, which is the band's. Scuffed, unremarkable, the one thing he still carries from before.
 
 ## Fixed marks
 
 - The band is on the LEFT wrist, always — on the visitor first, then on Walt.
+- Walt's watch is on his RIGHT wrist, never the left. The two are never on the same arm.
 - The visitor has TWO ridges at its throat, never three.
 - Walt's sleeves are rolled and his rig sits on his belt, never on a shoulder strap.
 

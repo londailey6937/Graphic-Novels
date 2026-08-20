@@ -54,6 +54,12 @@ object that recurs and must look the same, e.g. a specific band or weapon.
 Every humanoid must state what covers it from collarbone to ankle, and must
 state that it is adult and how its skin is textured. See BODIES AND FACES.]
 
+PROPS — every recurring object, and which side of the body it sits on
+[PROPS — list every object that recurs: what it looks like, and for anything
+worn, which wrist, hand, shoulder or hip. An object you do not declare will be
+invented, and once invented it repeats, and then it is canon by accident.
+Two objects worn on the same limb will be confused with each other.]
+
 FIXED MARKS — true in every image, check before you deliver
 [MARKS — two or three deliberately checkable asymmetries, e.g. "the band is on
 the LEFT wrist, always" · "she has two throat ridges, not three" · "his sleeves
@@ -83,6 +89,9 @@ Output the order first, in exactly these seven fields, then the image:
     CONTINUITY What must match the previous image exactly.
     NEW        The one thing this image adds that the last one did not have. If you
                cannot name it, the image is redundant — say so instead of drawing it.
+               If the anchor's intent names a fact about the story that is not
+               visible — a decision, an intention, a history — it must enter the
+               frame as an object or a posture. A caption is not the image.
     SIZE       2432x3040
 
 REPEAT THESE FOUR LINES IN EVERY MESSAGE, VERBATIM
@@ -213,6 +222,35 @@ continuing to drift.
    thread when style begins to wander, and re-attach the sheets to seed it.
 5. Attach, don't cite. A filename in the prompt is text; only an attached image is an
    image.
+
+## Rules learned the hard way
+
+Four things this template did not say until a book taught it.
+
+**Declare every prop, and which side it sits on.** A wristwatch appeared in one
+image of ours unbidden, then in the next, and by the fourth it was canon — worn on
+the same arm as the object the story actually cared about, so the frame whose whole
+job was *looking at the band* showed a man checking the time. Undeclared props do
+not stay absent; they get invented and then they persist.
+
+**When the art is consistent and the sheet disagrees, the art wins.** Our band was
+specified as plain and came back with small studs — the same studs, in every frame.
+The instinct is to regenerate until the art matches the document. The instinct is
+wrong and expensive. Amend the sheet to describe what you actually have, and it
+becomes canon from that point forward. Regenerate only when the art is
+*inconsistent with itself*.
+
+**Order the anchors against the prose, not the shoot.** A storyboard invites
+resequencing for visual rhythm, and it is usually an improvement to look at. But if
+the images are anchored to paragraphs in a reader, the two orders must agree, or the
+reader shows a beat before the sentence that causes it. Resequence the prose or
+resequence the anchors — never just the board.
+
+**A caption under a frame is not in the frame.** We captioned an opening image "he
+came here to die" for three revisions while the picture showed a man hiking. A
+reader who only looks at pictures never sees a caption. If a story fact has to
+reach them, it has to be an object: a coiled rope on the pack, a wedding ring being
+turned, a letter unopened.
 
 ## Why the order has seven fields and not one
 
