@@ -26,11 +26,12 @@
           "art": "p01"
         },
         {
-          "text": "Three weeks of walking had worn the intention down to something duller than resolve — not quite doubt, but adjacent to it. He'd stopped counting days. He'd stopped, mostly, thinking in words at all. The forest had a way of doing that to a mind that came to it broken. It didn't console him. It didn't need to. It simply went on being enormous and indifferent, and there was a mercy in that indifference he hadn't expected."
+          "text": "Three weeks of walking had worn the intention down to something duller than resolve — not quite doubt, but adjacent to it. He'd stopped counting days. He'd stopped, mostly, thinking in words at all. The forest had a way of doing that to a mind that came to it broken. It didn't console him. It didn't need to. It simply went on being enormous and indifferent, and there was a mercy in that indifference he hadn't expected.",
+          "art": "p02"
         },
         {
           "text": "He found the creek by sound before he found it by sight — water over stone, a small, ordinary music. He knelt to drink, and that was when he saw the shape half-fallen into a bank of stinging nettle, arms folded wrong beneath a body that was almost, but not quite, a man's.",
-          "art": "p02"
+          "art": "p03"
         }
       ]
     },
@@ -39,23 +40,23 @@
       "blocks": [
         {
           "text": "Later, Walt would not be able to say how long he sat with it. The skin was grey-green going to ash at the extremities, a color no fever produced in anything born of Earth. Whatever it was, it had gone into the nettle bed either by accident or desperation, and its body had answered the ordinary poison of an ordinary plant the way no ordinary body should: catastrophically. Foam at the corner of a mouth built strangely, like a mouth that had been designed by someone who'd only heard mouths described. A pulse, faint, at a throat with two ridges where a throat should have one.",
-          "art": "p03"
-        },
-        {
-          "text": "He didn't run. He would think about that, after — why he didn't run. Maybe a man who has already decided to end his own life has less fear left over for other things.",
           "art": "p04"
         },
         {
-          "text": "He built a fire he didn't need warmth for and sat beside a dying stranger from somewhere that was not anywhere he had a word for, and did the only human thing he had left in him, which was to not leave.",
+          "text": "He didn't run. He would think about that, after — why he didn't run. Maybe a man who has already decided to end his own life has less fear left over for other things.",
           "art": "p05"
         },
         {
+          "text": "He built a fire he didn't need warmth for and sat beside a dying stranger from somewhere that was not anywhere he had a word for, and did the only human thing he had left in him, which was to not leave.",
+          "art": "p07"
+        },
+        {
           "text": "The alien did not wake to thank him. It did not wake at all. Sometime past midnight, by the fire's low red logic, its breathing changed from labored to shallow to something that might have been called peaceful in a human chest, and did not resume.",
-          "art": "p06"
+          "art": "p08"
         },
         {
           "text": "Walt sat with the body until dawn found the silver band around its wrist and made it glint.",
-          "art": "p07"
+          "art": "p06"
         }
       ]
     },
@@ -64,18 +65,18 @@
       "blocks": [
         {
           "text": "It should have stayed on the dead. Walt knew this the way you know things about other people's belongings — you don't take them. But when he reached out, not to steal, only to look, the band was already moving. It opened along a seam he hadn't seen and closed itself around his wrist with a small sound like a held breath finally let go.",
-          "art": "p08"
-        },
-        {
-          "text": "There was no voice. He wants to be clear about that, later, in the only ways he has to be clear about anything — the tightening of a jaw, the specific stillness of a man remembering something he cannot say aloud. There was no voice. There was a pressure, an impression laid directly into the parts of him that language is built on top of, like a hand set flat against a window from the other side of the glass.",
           "art": "p09"
         },
         {
-          "text": "Not finished. Not yet finished. Come."
+          "text": "There was no voice. He wants to be clear about that, later, in the only ways he has to be clear about anything — the tightening of a jaw, the specific stillness of a man remembering something he cannot say aloud. There was no voice. There was a pressure, an impression laid directly into the parts of him that language is built on top of, like a hand set flat against a window from the other side of the glass.",
+          "art": "p10"
         },
         {
-          "text": "He did not come. Not that day. He sat instead with a body that had chosen, in its last accidental act, to hand him something he had not asked for and could not refuse — and Walt, who had walked into these woods to stop being anything to anyone, found that he had become, against all his intentions, responsible for something again.",
-          "art": "p10"
+          "text": "Not finished. Not yet finished. Come.",
+          "art": "p13"
+        },
+        {
+          "text": "He did not come. Not that day. He sat instead with a body that had chosen, in its last accidental act, to hand him something he had not asked for and could not refuse — and Walt, who had walked into these woods to stop being anything to anyone, found that he had become, against all his intentions, responsible for something again."
         }
       ]
     },
@@ -83,7 +84,8 @@
       "n": "IV",
       "blocks": [
         {
-          "text": "The changes were slow enough, at first, to deny."
+          "text": "The changes were slow enough, at first, to deny.",
+          "art": "p15"
         },
         {
           "text": "Colors sharpened before he noticed the sharpening. He could hold four threads of a problem in his mind where he used to lose the second one reaching for the third. He needed less. Less food, less sleep, less noise to feel steady — as if some tax he had been paying his whole life without knowing it had simply, quietly, been waived.",
@@ -95,10 +97,11 @@
         },
         {
           "text": "The band did not speak in words even once. It spoke in urges — a pull, northwest, toward the low grassy meadow where the ground didn't sit quite right, where moss grew in patterns too even to be moss, where the birds had gone quiet in a rough circle nearly forty yards across and never explained why.",
-          "art": "p13"
+          "art": "p14"
         },
         {
-          "text": "He went there because something in him that was no longer entirely his own wanted him to, and because — for the first time since he'd left what used to be his home — something wanted him at all."
+          "text": "He went there because something in him that was no longer entirely his own wanted him to, and because — for the first time since he'd left what used to be his home — something wanted him at all.",
+          "art": "p16"
         }
       ]
     },
@@ -107,18 +110,18 @@
       "blocks": [
         {
           "text": "He found the ship the way you find a face in a cloud: not seeing it, and then unable to stop seeing it. Not a hull so much as a held breath in the land itself, grass grown thick and strange across curves too smooth for hillside, mud settled into it the way mud settles into something that has been patient for a very long time.",
-          "art": "p14"
+          "art": "p17"
         },
         {
           "text": "It did not open for him with drama. It simply, at some point he couldn't mark, had already let him in, the way a held-open door only becomes noticeable once you're standing through it.",
-          "art": "p15"
+          "art": "p18"
         },
         {
           "text": "Inside, there was no mother waiting to explain herself. There was, instead, a long low gallery, dim and warm as a held hand, and in it: others."
         },
         {
           "text": "Not human. Not all of them anything he had names for. Beings who had also, somewhere, in some ordinary meadow or reef or cave on some world Walt would never see, been found wanting by whatever standard their own lives had judged them by — and had been picked up anyway. Kept anyway. Not repaired. Not fixed. Kept, the way you keep something you've decided is worth keeping regardless of its condition.",
-          "art": "p16"
+          "art": "p19"
         },
         {
           "text": "He understood, standing there, without a single word being spoken to him, that this was not a laboratory. It was closer to a house that had never once, in all its ranging through the dark between worlds, turned anyone away at the door."
@@ -130,15 +133,15 @@
       "blocks": [
         {
           "text": "She came to him the way weather comes — not arriving, exactly, more like a pressure system settling in around him until he realized the air itself had changed. He never saw a face, if she had one to see. What he felt was closer to being known, entirely, all at once, the way you're known by someone who has watched you your whole life without you ever noticing them watching.",
-          "art": "p17"
+          "art": "p20"
         },
         {
           "text": "There was a tone, low and layered, that he came to understand — not through translation, but through recognition — was made of many smaller tones together. Hundreds. Maybe more. Each one a life she had gathered up rather than let end unwitnessed. And somewhere in that chord, faint and new, was a note that was his.",
-          "art": "p18"
+          "art": "p21"
         },
         {
           "text": "He wept, there, in a way he had not let himself do in the woods with a rope he never used and a plan he never finished. Not from fear. From the specific, unbearable relief of being seen by something that did not require him to have turned out well.",
-          "art": "p19"
+          "art": "p22"
         }
       ]
     },
@@ -146,12 +149,11 @@
       "n": "VII",
       "blocks": [
         {
-          "text": "The agencies came the way agencies come — not with understanding, but with radar returns and thermal anomalies and a very ordinary human fear of anything they could not yet file a report on. Vehicles at the tree line. Voices on channels not meant for civilians. A meadow that had kept its secret for longer than any of their instruments, finally giving it up to men who would only ever see a threat where Walt had found the first mercy of his life.",
-          "art": "p20"
+          "text": "The agencies came the way agencies come — not with understanding, but with radar returns and thermal anomalies and a very ordinary human fear of anything they could not yet file a report on. Vehicles at the tree line. Voices on channels not meant for civilians. A meadow that had kept its secret for longer than any of their instruments, finally giving it up to men who would only ever see a threat where Walt had found the first mercy of his life."
         },
         {
           "text": "He stood at the threshold of the ship as the tree line lit with approaching headlights, and understood, with a clarity the bracelet had given him and would now, in its own way, take back, that there was no version of tonight where he walked out to explain himself to men with rifles and forms to fill out. They would not believe the truth. They would not have room, in whatever story they told themselves about tonight, for a homeless man made whole by something that only ever wanted to keep him.",
-          "art": "p21"
+          "art": "p23"
         },
         {
           "text": "The choice, when it came, did not feel like a choice so much as an admission of something already true."
@@ -160,8 +162,7 @@
           "text": "He looked back once — at the tree line, the lights, the country that had, in its way, already let him go months before any of this began — and then did not look back again."
         },
         {
-          "text": "The ship did not rise in fire or fury. It simply, unhurriedly, was no longer where it had been, the grass springing slowly back over the shape it left behind, the way grass forgets almost everything, given time.",
-          "art": "p22"
+          "text": "The ship did not rise in fire or fury. It simply, unhurriedly, was no longer where it had been, the grass springing slowly back over the shape it left behind, the way grass forgets almost everything, given time."
         }
       ]
     },
@@ -170,7 +171,7 @@
       "blocks": [
         {
           "text": "Somewhere behind him, men would search a meadow and find nothing but flattened earth and a scorch of confusion they'd spend years trying to close a file on.",
-          "art": "p23"
+          "art": "p24"
         },
         {
           "text": "Somewhere ahead of him — nowhere, and everywhere, and every meadow and reef and dark corner of every world she had ever quietly loved something out of its ending — Walt's tone settled in among the others."
@@ -179,8 +180,7 @@
           "text": "It was not a triumph. He had not been saved, exactly, or fixed, or made a hero of. He had simply, finally, after a life spent believing himself disposable, been kept."
         },
         {
-          "text": "And somewhere below, in a country that would never know what it had actually lost that night, the forest closed back over the place he'd once gone to disappear — and did, at last, what forests do best.",
-          "art": "p24"
+          "text": "And somewhere below, in a country that would never know what it had actually lost that night, the forest closed back over the place he'd once gone to disappear — and did, at last, what forests do best."
         },
         {
           "text": "It kept his secret, too."
@@ -192,170 +192,194 @@
     "p01": {
       "sec": "I",
       "role": "splash",
+      "board_no": 1,
+      "intent": "Walt enters the Olympic rainforest. (He came here to die.)",
       "prompt": "WALT walking alone through vast old-growth Olympic rainforest, tiny against black trunks that rise out of frame. Rain in the air. He carries almost nothing and is walking away from everything.",
-      "image": null,
-      "intent": "Walt walking alone, deep in the forest"
+      "image": null
     },
     "p02": {
       "sec": "I",
-      "role": "splash",
+      "role": "quad",
+      "board_no": 2,
+      "intent": "He approaches the creek.",
       "prompt": "WALT kneeling at a shallow creek, cupped hands lifted to drink, his eyes just risen off the water toward something out of frame right. Wet stone, nettle bank.",
-      "image": null,
-      "intent": "kneeling to drink; he sees the shape"
+      "image": null
     },
     "p03": {
-      "sec": "II",
-      "role": "splash",
+      "sec": "I",
+      "role": "quad",
+      "board_no": 3,
+      "intent": "He spots something unfamiliar.",
       "prompt": "THE DISCOVERY. WALT kneeling in wet stone beside the VISITOR, which lies half-fallen into a bank of stinging nettle, arms folded wrong beneath it. High three-quarter angle. He is not afraid. He is attending.",
-      "image": null,
-      "intent": "the discovery"
+      "image": null
     },
     "p04": {
       "sec": "II",
-      "role": "quad",
+      "role": "splash",
+      "board_no": 4,
+      "intent": "A closer look reveals an alien, half-fallen into a bank of stinging nettle.",
       "prompt": "WALT crouching motionless, looking down at the VISITOR's face: a mouth built slightly wrong, foam at one corner, the two ridges at its throat, eyes closed.",
-      "image": null,
-      "intent": "the visitor's face, close"
+      "image": null
     },
     "p05": {
       "sec": "II",
       "role": "quad",
+      "board_no": 5,
+      "intent": "Walt examines the alien.",
       "prompt": "WALT crouched building a small fire on wet ground at dusk, cupping the first flame, the VISITOR's body lying a few feet away in the nettles.",
-      "image": null,
-      "intent": "building the fire at dusk"
+      "image": null
     },
     "p06": {
       "sec": "II",
       "role": "quad",
+      "board_no": 6,
+      "intent": "He notices a silver band with small studs on its left wrist.",
       "prompt": "Night. Firelight on WALT's face as he sits keeping watch over the VISITOR, close enough to touch and not touching. Warm red light, cold black forest.",
-      "image": null,
-      "intent": "the night vigil"
+      "image": null
     },
     "p07": {
       "sec": "II",
       "role": "quad",
+      "board_no": 7,
+      "intent": "He remains with it as night falls.",
       "prompt": "Dawn. The VISITOR's outflung hand lying still on wet stone, and the plain silver BAND at its wrist catching the first light.",
-      "image": null,
-      "intent": "dawn; the band on the dead wrist"
+      "image": null
     },
     "p08": {
-      "sec": "III",
+      "sec": "II",
       "role": "splash",
+      "board_no": 8,
+      "intent": "Its breathing grows shallow. Then, it stops.",
       "prompt": "The silver BAND, open along a seam that was not there before, closing itself around WALT's wrist. His other hand is drawn back. It is putting itself on him; he is not doing it.",
-      "image": null,
-      "intent": "the band closes on Walt's wrist"
+      "image": null
     },
     "p09": {
       "sec": "III",
       "role": "splash",
+      "board_no": 9,
+      "intent": "Dawn. The band closes itself on Walt's left wrist.",
       "prompt": "WALT on his knees, head thrown back, mouth open, one arm rigid as the impression lands in him. The VISITOR's body lies across the frame beside him. No blood, no wound — this is contact, not injury.",
-      "image": null,
-      "intent": "the impression lands"
+      "image": null
     },
     "p10": {
       "sec": "III",
       "role": "quad",
+      "board_no": 10,
+      "intent": "He looks at the band, feeling its presence.",
       "prompt": "WALT sitting back on his heels beside the body at full morning, changed, turning his own wrist to look at the silver band on it.",
-      "image": null,
-      "intent": "morning; he looks at his own wrist"
+      "image": null
     },
     "p11": {
       "sec": "IV",
       "role": "quad",
+      "board_no": 11,
+      "intent": "His perception sharpens. He notices things he hadn't before.",
       "prompt": "The same forest seen twice in one frame: dull and grey at the edges, impossibly sharp and saturated at the centre where WALT stands looking. His new sight.",
-      "image": null,
-      "intent": "the world sharpens"
+      "image": null
     },
     "p12": {
       "sec": "IV",
       "role": "quad",
+      "board_no": 12,
+      "intent": "That morning, awake, he checks the band.",
       "prompt": "WALT waking at first light and immediately reaching to check his own wrist — feeling for the band, afraid it has been taken back in the night. Relief on his face when he finds it.",
-      "image": null,
-      "intent": "waking; checking the band is still there"
+      "image": null
     },
     "p13": {
-      "sec": "IV",
-      "role": "quad",
+      "sec": "III",
+      "role": "splash",
+      "board_no": 13,
+      "intent": "He feels the impression: “Not finished. Not yet finished. Come.”",
       "prompt": "WALT walking northwest with purpose for the first time, band bright at his wrist, a low grassy meadow opening ahead of him through the trees.",
-      "image": null,
-      "intent": "walking northwest, with purpose"
+      "image": null
     },
     "p14": {
-      "sec": "V",
-      "role": "splash",
+      "sec": "IV",
+      "role": "quad",
+      "board_no": 14,
+      "intent": "The impression calls him onward.",
       "prompt": "THE SHIP. A meadow where the grass grows too even, and in it a low broad rise forty yards across — curves too smooth for a hillside, moss lying in patterns too regular to be moss. WALT standing small at the tree line. No birds anywhere.",
-      "image": null,
-      "intent": "the ship in the meadow"
+      "image": null
     },
     "p15": {
-      "sec": "V",
-      "role": "splash",
+      "sec": "IV",
+      "role": "quad",
+      "board_no": 15,
+      "intent": "He looks at the band again, understanding.",
       "prompt": "An opening standing wide in the grassed flank of the ship, warm amber light spilling out onto wet grass, WALT stepping through it. He does not look back.",
-      "image": null,
-      "intent": "stepping through the opening"
+      "image": null
     },
     "p16": {
-      "sec": "V",
-      "role": "splash",
+      "sec": "IV",
+      "role": "quad",
+      "board_no": 16,
+      "intent": "He sets out, walking northwest.",
       "prompt": "INSIDE: a long low gallery, dim and warm as a held hand, and standing along it THE KEPT — beings from many worlds, none human, none alike, some upright, some coiled, some barely light held in a shape. All of them calm. WALT small in the doorway.",
-      "image": null,
-      "intent": "the gallery of the kept"
+      "image": null
     },
     "p17": {
-      "sec": "VI",
-      "role": "quad",
+      "sec": "V",
+      "role": "splash",
+      "board_no": 17,
+      "intent": "He is led to it. Not a hull so much as a held breath in the land itself.",
       "prompt": "THE KEEPER arriving as weather: warm layered light and visible pressure filling the gallery, surrounding WALT completely, no face anywhere in it. He is entirely enclosed and entirely unharmed.",
-      "image": null,
-      "intent": "the keeper arrives as weather"
+      "image": null
     },
     "p18": {
-      "sec": "VI",
+      "sec": "V",
       "role": "quad",
+      "board_no": 18,
+      "intent": "He finds the entrance.",
       "prompt": "The chord made visible: hundreds of small faint lights held together in one warm mass around WALT, each one a life she kept — and one of them, near him, newer and fainter than the rest.",
-      "image": null,
-      "intent": "the chord of many lives, one new"
+      "image": null
     },
     "p19": {
-      "sec": "VI",
-      "role": "quad",
+      "sec": "V",
+      "role": "splash",
+      "board_no": 19,
+      "intent": "He sees the kept — none human, none alike, some upright, some coiled, some barely light held in a shape.",
       "prompt": "WALT weeping, lit from all sides by the keeper's warm light. Not fear. Relief. His face wide open for the first time in the story.",
-      "image": null,
-      "intent": "Walt weeps"
+      "image": null
     },
     "p20": {
-      "sec": "VII",
-      "role": "quad",
+      "sec": "VI",
+      "role": "splash",
+      "board_no": 20,
+      "intent": "She comes to him the way weather comes — light and pressure filling the room. He never sees a face.",
       "prompt": "Night at the forest tree line: unmarked vehicles, generator lights, silhouetted men holding rifles and clipboards, headlights driving into fog.",
-      "image": null,
-      "intent": "headlights at the tree line"
+      "image": null
     },
     "p21": {
-      "sec": "VII",
-      "role": "splash",
+      "sec": "VI",
+      "role": "quad",
+      "board_no": 21,
+      "intent": "He understands it: hundreds of faint lights, one new and his.",
       "prompt": "WALT standing in the ship's lit threshold, backlit and small, looking back across the dark meadow at the headlights coming toward him. The whole choice held in one frame.",
-      "image": null,
-      "intent": "the threshold; looking back"
+      "image": null
     },
     "p22": {
-      "sec": "VII",
+      "sec": "VI",
       "role": "splash",
+      "board_no": 22,
+      "intent": "The specific, unbearable relief of being seen by something that did not require him to have turned out well. He weeps.",
       "prompt": "The meadow empty. The ship simply no longer where it was, grass springing slowly back over the shape it left behind. Dawn coming on.",
-      "image": null,
-      "intent": "the meadow empty"
+      "image": null
     },
     "p23": {
-      "sec": "VIII",
+      "sec": "VII",
       "role": "splash",
+      "board_no": 23,
+      "intent": "He stands at the threshold as the tree line lights with approaching headlights. Unmarked vehicles. Men with rifles and forms. Channels not meant for civilians.",
       "prompt": "Men standing in the empty meadow at first light with flashlights and instruments, walking flattened grass, finding nothing at all.",
-      "image": null,
-      "intent": "men find nothing"
+      "image": null
     },
     "p24": {
       "sec": "VIII",
       "role": "splash",
+      "board_no": 24,
+      "intent": "They find nothing. The grass springs slowly back over the shape it left behind.",
       "prompt": "The forest closing back over the place, seen from high above: unbroken canopy, low cloud, no clearing anywhere. It keeps the secret.",
-      "image": null,
-      "intent": "the forest closes over"
+      "image": null
     }
   },
   "fixed_marks": [
