@@ -28,9 +28,18 @@ def export(script_path):
 
     cast = d.get("characters", {})
     marks = d.get("fixed_marks", [])
-    out += ["<!-- ANCHORED STORY — for the illustrated-novel project.",
-            "     Anchor lines read [IMAGE id | role | intent]. Work them in order.",
-            "     Every image is 2432x3040, 4:5, edge to edge, no text, no bars. -->", ""]
+    out += ["## How to draw this file", "",
+            "Anchor lines read `[IMAGE id | role | intent]`. Work them in order, top to",
+            "bottom. Never skip, add or reorder one. For each: write the order "
+            "(SHOT / CAMERA / LIGHT-TIME / STATE / CONTINUITY / NEW / SIZE), then draw it.",
+            "", "**Standing constraints — true for every image in this file:**", "",
+            "- **One continuous photographic image.** No panels, no gutters, no borders,",
+            "  no insets, no composed page. One frame of film, one moment.",
+            "- **No text of any kind** in the image — no captions, balloons, letters,",
+            "  numbers, logos or signatures.",
+            "- **2432x3040, 4:5 portrait, filled edge to edge.** No letterbox bars.",
+            "- **Setting:** " + (m.get("setting") or "as described in the prose") ,
+            "- Never restyle, idealize or clean up a character.", ""]
     if cast:
         out += ["## Cast", ""]
         out += [f"- **{k.upper()}** — {v}" for k, v in cast.items()]

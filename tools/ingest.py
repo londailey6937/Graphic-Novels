@@ -31,6 +31,9 @@ def parse(path):
         title, body = m.group(1).strip(), raw[m.end():]
     paras, cur, sections, anchors = [], [], [], {}
     pending, in_comment = None, False
+    # an anchored file carries front matter (how-to, cast, marks) before "## Story";
+    # a plain story has none, so start at the top in that case
+    started = not re.search(r"^#{2,6}\s+story\s*$", body, re.I | re.M)
     for line in body.split("\n"):
         a = ANCHOR.match(line.strip())
         if a:                              # anchor binds to the next paragraph
@@ -39,8 +42,12 @@ def parse(path):
         h = re.match(r"#{2,6}\s+(.+)", line.strip())
         if h:
             name = h.group(1).strip()
-            if name.lower() not in ("cast", "fixed marks", "story"):
+            if name.lower() == "story":
+                started = True
+            elif started:
                 sections.append((len(paras), name))
+            continue
+        if not started:
             continue
         t = line.strip()
         if in_comment:                      # front-matter comment block

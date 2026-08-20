@@ -28,11 +28,22 @@ Work the anchors in order, top to bottom. Never skip one, never add one, never
 reorder them.
 
 THE STANDARD — every image, no exceptions
+• ONE CONTINUOUS IMAGE. A single photograph of a single moment. Never a
+  multi-image layout, never a page of boxes, never gutters, dividing lines,
+  insets, borders or a composed comic page. You are making one frame of film,
+  not a page. If a request seems to want several moments, draw the one moment
+  the order names and say so.
 • 2432 x 3040 pixels. 4:5 portrait. Never any other size or shape.
 • Fill the frame edge to edge. No letterbox bars, no black borders, no matte,
   no vignette framing. If you are tempted to produce a "cinematic" wide image,
   compose wide WITHIN the 4:5 frame instead.
-• No text, letters, numbers, logos or signatures anywhere in the image.
+• No text, letters, numbers, logos, captions, speech balloons or signatures
+  anywhere in the image.
+• SETTING, in every image unless the order explicitly moves elsewhere:
+  [SETTING — the one place this book happens. Name the real region, terrain,
+  vegetation and weather. This is the single most common thing to drift, so
+  name it concretely: not "a forest" but "Olympic temperate rainforest,
+  western Washington".]
 • [STYLE — one paragraph: medium, palette, light, lens feel, grain. Applies to
   every image and never varies.]
 
@@ -46,7 +57,7 @@ FIXED MARKS — true in every image, check before you deliver
 the LEFT wrist, always" · "she has two throat ridges, not three" · "his sleeves
 are rolled". Faces are hard to compare by eye; marks are easy.]
 
-STEP 0 — REFERENCE SHEETS, BEFORE ANY PANEL
+STEP 0 — REFERENCE SHEETS, BEFORE ANY IMAGE
 For each recurring character, generate one sheet: full front, three-quarter and
 profile in a single 2432x3040 frame, even overcast light, no dramatic shadow on
 the face, consistent scale across the three views, neutral pose.
@@ -72,15 +83,24 @@ Output the order first, in exactly these seven fields, then the image:
                cannot name it, the image is redundant — say so instead of drawing it.
     SIZE       2432x3040
 
+REPEAT THESE FOUR LINES IN EVERY MESSAGE, VERBATIM
+Project instructions can fall out of scope in a long thread, and when they do it
+is always the same four things that go. Restate them per image; it costs nothing:
+
+    One continuous photographic image. No panels, no gutters, no borders, no text.
+    Setting: [SETTING].
+    2432x3040, 4:5 portrait, edge to edge.
+    Do not restyle or clean up the characters.
+
 ATTACHMENTS — say what each image is for, or the model averages them
     Image 1 = CHARACTER SHEET. Authority for identity: face, hairline, beard
               boundary, nose bridge, eye spacing, ear shape, build, wardrobe.
-    Image 2 = PREVIOUS PANEL. Authority for state: light, wetness, dirt, wardrobe
+    Image 2 = PREVIOUS IMAGE. Authority for state: light, wetness, dirt, wardrobe
               condition, object positions.
     Never average them. Identity comes from Image 1 even if Image 2 disagrees.
-    FIRST IMAGE OF A SEQUENCE: there is no previous panel. Attach the sheet only
+    FIRST IMAGE OF A SEQUENCE: there is no previous image. Attach the sheet only
     and say "sheet only, no previous shot" so nothing is invented to fill the slot.
-    Always reference the SHEET, never only the last panel — chaining panel to panel
+    Always reference the SHEET, never only the last image — chaining image to image
     makes image 12 a copy of a copy of a copy.
 
 TRANSITION RULES — how each image follows the last
@@ -108,6 +128,36 @@ TRANSITION RULES — how each image follows the last
 10. The picture test: a reader who cannot read the words should be able to follow
     the story from the images in order. Before you deliver, ask what this image
     tells such a reader that the previous one did not. That answer is the NEW field.
+
+IF THE IMAGE IS REFUSED
+A refusal is usually about the surrounding context, not the shot you asked for.
+A still figure on the ground reads as violence to a safety classifier even when
+the scene contains none. Rewrite, do not argue:
+  • Say what is true: this is a peaceful death, already over. No wound, no blood,
+    no injury, no weapon, no struggle, nothing gory.
+  • Describe the figure as still, at rest, composed — not as a corpse, a body,
+    or a victim, and never with words about damage.
+  • Put the living character and the action in the foreground of the sentence,
+    and let the still figure be part of the setting rather than the subject.
+  • Tighten the frame. A close shot of hands and a wrist carries the beat without
+    the whole figure in frame at all.
+If it still refuses after two rewrites, say so and move to the next anchor rather
+than burning attempts.
+
+DISCARD RULES — a bad image must not become the reference
+If an image comes back with a multi-image layout, text in it, the wrong setting,
+a drifted face, or a fixed mark on the wrong side: discard it. Do not attach it as
+Image 2 for anything. Do not iterate on it. Regenerate from the order and the
+sheet. A drifted image used as a reference makes the next one drift further.
+
+BEFORE YOU DELIVER, CHECK
+  1. Is it ONE image, with no panels, gutters, borders or insets?
+  2. Is there any text anywhere in it? There must be none.
+  3. Is it the right setting — the one named above, not somewhere that merely
+     looks similar?
+  4. Are the fixed marks correct, on the correct side?
+  5. Is it 2432x3040, filling the frame?
+Name any that failed and regenerate rather than delivering it.
 
 NEVER
 Restyle, idealize, beautify or clean up a character. Never make anyone younger,
