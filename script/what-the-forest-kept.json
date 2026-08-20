@@ -193,7 +193,7 @@
       "role": "splash",
       "board_no": 1,
       "intent": "Walt enters the Olympic rainforest. (He came here to die.)",
-      "prompt": "WALT walking alone through vast old-growth Olympic rainforest, tiny against black trunks that rise out of frame. Rain in the air. He carries almost nothing and is walking away from everything.",
+      "prompt": "A gaunt weathered man in his late fifties walks alone through vast old-growth Olympic rainforest, small against black trunks that rise out of frame. A coiled rope is lashed to his pack. Dirty olive work shirt, sleeves rolled, dark suspenders, canvas trousers. Rain in the air, moss and fern, low cloud, no path.",
       "image": null
     },
     "p02": {
@@ -201,7 +201,7 @@
       "role": "quad",
       "board_no": 2,
       "intent": "He approaches the creek.",
-      "prompt": "WALT kneeling at a shallow creek, cupped hands lifted to drink, his eyes just risen off the water toward something out of frame right. Wet stone, nettle bank.",
+      "prompt": "Seen from behind, the man walks down a rocky creek bed between dense green banks, shoulders low, a coiled rope on his pack. Water over stone ahead of him. Wet grey light.",
       "image": null
     },
     "p03": {
@@ -209,7 +209,7 @@
       "role": "quad",
       "board_no": 3,
       "intent": "He spots something unfamiliar.",
-      "prompt": "THE DISCOVERY. WALT kneeling in wet stone beside the VISITOR, which lies half-fallen into a bank of stinging nettle, arms folded wrong beneath it. High three-quarter angle. He is not afraid. He is attending.",
+      "prompt": "Close on the man's face as he stops walking, caught mid-step, looking at something out of frame. Rain on his skin, three weeks of beard, exhaustion and sudden attention together.",
       "image": null
     },
     "p04": {
@@ -217,7 +217,7 @@
       "role": "splash",
       "board_no": 4,
       "intent": "A closer look reveals an alien, half-fallen into a bank of stinging nettle.",
-      "prompt": "WALT crouching motionless, looking down at the VISITOR's face: a mouth built slightly wrong, foam at one corner, the two ridges at its throat, eyes closed.",
+      "prompt": "A tall gaunt non-human body lies half-fallen into a dense bank of stinging nettle beside a creek. Grey-green skin, deeply creased and coarsely textured like weathered stone, going ash at the fingers and toes. Long thin limbs, elongated cranial ridge sweeping back, two ridges at the throat. Still, unmarked, at rest. Wet leaves across it.",
       "image": null
     },
     "p05": {
@@ -225,7 +225,7 @@
       "role": "quad",
       "board_no": 5,
       "intent": "Walt examines the alien.",
-      "prompt": "WALT crouched building a small fire on wet ground at dusk, cupping the first flame, the VISITOR's body lying a few feet away in the nettles.",
+      "prompt": "The man crouches over the still non-human figure in the nettles, one hand hovering near its arm, studying it closely without fear. Overcast forest light, wet stone underfoot.",
       "image": null
     },
     "p06": {
@@ -233,7 +233,7 @@
       "role": "quad",
       "board_no": 6,
       "intent": "He notices a silver band with small studs at its wrist.",
-      "prompt": "Night. Firelight on WALT's face as he sits keeping watch over the VISITOR, close enough to touch and not touching. Warm red light, cold black forest.",
+      "prompt": "Macro of the non-human figure's forearm and wrist lying still among wet nettle leaves. A close-fitting silver cuff with a row of small raised studs encircles the wrist, catching the flat grey light like water.",
       "image": null
     },
     "p07": {
@@ -241,7 +241,7 @@
       "role": "quad",
       "board_no": 7,
       "intent": "He remains with it as night falls.",
-      "prompt": "Dawn. The VISITOR's outflung hand lying still on wet stone, and the plain silver BAND at its wrist catching the first light.",
+      "prompt": "Night in the forest. A small fire burns low on wet ground. The man sits beside it keeping watch over the still figure lying a few feet away in the nettles. Warm red firelight on his face, cold black forest beyond.",
       "image": null
     },
     "p08": {
@@ -249,7 +249,7 @@
       "role": "splash",
       "board_no": 8,
       "intent": "Its breathing grows shallow. Then, it stops.",
-      "prompt": "The silver BAND, open along a seam that was not there before, closing itself around WALT's wrist. His other hand is drawn back. It is putting itself on him; he is not doing it.",
+      "prompt": "Close portrait of the non-human face at rest among rain-wet nettle, eyes closed, the last breath gone out of it. Deeply creased weathered skin, heavy brow, deep sockets, elongated cranial ridge. Absolutely still. Night giving way to first grey light.",
       "image": null
     },
     "p09": {
@@ -257,7 +257,7 @@
       "role": "splash",
       "board_no": 9,
       "intent": "Dawn. The band closes itself on Walt's wrist.",
-      "prompt": "WALT on his knees, head thrown back, mouth open, one arm rigid as the impression lands in him. The VISITOR's body lies across the frame beside him. No blood, no wound — this is contact, not injury.",
+      "prompt": "Dawn. Macro of the man's bare human forearm, and the silver studded cuff closing itself around his wrist along a seam. His other hand is drawn back. The band is moving; he is not moving it. Wet stone and nettle behind.",
       "image": null
     },
     "p10": {
@@ -265,7 +265,7 @@
       "role": "quad",
       "board_no": 10,
       "intent": "He looks at the band, feeling its presence.",
-      "prompt": "WALT sitting back on his heels beside the body at full morning, changed, turning his own wrist to look at the silver band on it.",
+      "prompt": "The man sits back on his heels in the wet forest at full morning, turning his own forearm to look at the silver studded cuff now on it. Changed, quiet, uncertain.",
       "image": null
     },
     "p11": {
@@ -273,7 +273,7 @@
       "role": "quad",
       "board_no": 11,
       "intent": "His perception sharpens. He notices things he hadn't before.",
-      "prompt": "The same forest seen twice in one frame: dull and grey at the edges, impossibly sharp and saturated at the centre where WALT stands looking. His new sight.",
+      "prompt": "The forest rendered with impossible clarity: every needle, water bead and moss filament sharp and saturated at the centre of frame where the man stands looking, the edges of the image duller and greyer. His new sight.",
       "image": null
     },
     "p12": {
@@ -281,7 +281,7 @@
       "role": "quad",
       "board_no": 12,
       "intent": "That morning, awake, he checks the band.",
-      "prompt": "WALT waking at first light and immediately reaching to check his own wrist — feeling for the band, afraid it has been taken back in the night. Relief on his face when he finds it.",
+      "prompt": "Macro of the man's hands at first light, one turning the silver studded cuff on the opposite forearm, checking it is still there. Weathered knuckles, dirt in the creases, relief in the grip.",
       "image": null
     },
     "p13": {
@@ -289,7 +289,7 @@
       "role": "splash",
       "board_no": 13,
       "intent": "He feels the impression: “Not finished. Not yet finished. Come.”",
-      "prompt": "WALT walking northwest with purpose for the first time, band bright at his wrist, a low grassy meadow opening ahead of him through the trees.",
+      "prompt": "Close on the man's face, eyes closed, head slightly back, receiving something wordless. Faint warm light touching him from no visible source. Wet forest behind, out of focus.",
       "image": null
     },
     "p14": {
@@ -297,7 +297,7 @@
       "role": "quad",
       "board_no": 14,
       "intent": "The impression calls him onward.",
-      "prompt": "THE SHIP. A meadow where the grass grows too even, and in it a low broad rise forty yards across — curves too smooth for a hillside, moss lying in patterns too regular to be moss. WALT standing small at the tree line. No birds anywhere.",
+      "prompt": "A vast web of small golden lights suspended in dark forest air, threads of warm light branching and connecting outward, drawing the eye northwest. No figures. Deep green-black background.",
       "image": null
     },
     "p15": {
@@ -305,7 +305,7 @@
       "role": "quad",
       "board_no": 15,
       "intent": "He looks at the band again, understanding.",
-      "prompt": "An opening standing wide in the grassed flank of the ship, warm amber light spilling out onto wet grass, WALT stepping through it. He does not look back.",
+      "prompt": "The man stands still in the forest looking down at the silver studded cuff on his forearm, understanding settling into his face. Overcast light, wet foliage.",
       "image": null
     },
     "p16": {
@@ -313,7 +313,7 @@
       "role": "quad",
       "board_no": 16,
       "intent": "He sets out, walking northwest.",
-      "prompt": "INSIDE: a long low gallery, dim and warm as a held hand, and standing along it THE KEPT — beings from many worlds, none human, none alike, some upright, some coiled, some barely light held in a shape. All of them calm. WALT small in the doorway.",
+      "prompt": "Seen from behind, the man walks away into deep forest with purpose for the first time, pack on his back, heading northwest between huge mossed trunks. Shafts of grey light.",
       "image": null
     },
     "p17": {
@@ -321,7 +321,7 @@
       "role": "splash",
       "board_no": 17,
       "intent": "He is led to it. Not a hull so much as a held breath in the land itself.",
-      "prompt": "THE KEEPER arriving as weather: warm layered light and visible pressure filling the gallery, surrounding WALT completely, no face anywhere in it. He is entirely enclosed and entirely unharmed.",
+      "prompt": "A meadow where the grass grows too even, and in it a low broad rise forty yards across — curves too smooth for a hillside, thick moss lying in patterns too regular to be moss. Not a hull, a held breath in the land. Grey overcast, no birds.",
       "image": null
     },
     "p18": {
@@ -329,7 +329,7 @@
       "role": "quad",
       "board_no": 18,
       "intent": "He finds the entrance.",
-      "prompt": "The chord made visible: hundreds of small faint lights held together in one warm mass around WALT, each one a life she kept — and one of them, near him, newer and fainter than the rest.",
+      "prompt": "A dark oval opening in the mossed flank of the buried shape, ferns and moss growing to its edge. The man stands small before it with his back to us, about to enter.",
       "image": null
     },
     "p19": {
@@ -337,7 +337,7 @@
       "role": "splash",
       "board_no": 19,
       "intent": "He sees the kept — none human, none alike, some upright, some coiled, some barely light held in a shape.",
-      "prompt": "WALT weeping, lit from all sides by the keeper's warm light. Not fear. Relief. His face wide open for the first time in the story.",
+      "prompt": "Inside a long low gallery, dim and warm as a held hand, amber light from unseen sources. Along it stand the kept: beings from many worlds, none human and none alike — some upright, some coiled, one barely light held in a shape, one translucent and drifting. All of them calm. The man small among them.",
       "image": null
     },
     "p20": {
@@ -345,7 +345,7 @@
       "role": "splash",
       "board_no": 20,
       "intent": "She comes to him the way weather comes — light and pressure filling the room. He never sees a face.",
-      "prompt": "Night at the forest tree line: unmarked vehicles, generator lights, silhouetted men holding rifles and clipboards, headlights driving into fog.",
+      "prompt": "A burst of warm layered light fills the domed gallery, pressure made visible in the air, radiating outward and enclosing the small figure of the man standing beneath it. No face anywhere in it. Amber and gold against dim bronze walls.",
       "image": null
     },
     "p21": {
@@ -353,7 +353,7 @@
       "role": "quad",
       "board_no": 21,
       "intent": "He understands it: hundreds of faint lights, one new and his.",
-      "prompt": "WALT standing in the ship's lit threshold, backlit and small, looking back across the dark meadow at the headlights coming toward him. The whole choice held in one frame.",
+      "prompt": "The man stands amid hundreds of small faint warm lights suspended around him at every depth, each one a life. One light near him is newer and fainter than the rest. Warm dark gallery.",
       "image": null
     },
     "p22": {
@@ -361,7 +361,7 @@
       "role": "splash",
       "board_no": 22,
       "intent": "The specific, unbearable relief of being seen by something that did not require him to have turned out well. He weeps.",
-      "prompt": "The meadow empty. The ship simply no longer where it was, grass springing slowly back over the shape it left behind. Dawn coming on.",
+      "prompt": "The man weeps, one hand pressed over his eyes, lit from all sides by warm amber light. Not fear — relief. His face wide open for the first time.",
       "image": null
     },
     "p23": {
@@ -369,7 +369,7 @@
       "role": "splash",
       "board_no": 23,
       "intent": "He stands at the threshold as the tree line lights with approaching headlights. Unmarked vehicles. Men with rifles and forms. Channels not meant for civilians.",
-      "prompt": "Men standing in the empty meadow at first light with flashlights and instruments, walking flattened grass, finding nothing at all.",
+      "prompt": "The man stands silhouetted in the lit oval threshold of the buried ship, looking back across a dark wet meadow at approaching headlights. Unmarked vehicles and generator lights at the tree line, silhouetted figures with rifles. Rain, night, reflected light on wet grass.",
       "image": null
     },
     "p24": {
@@ -377,7 +377,7 @@
       "role": "splash",
       "board_no": 24,
       "intent": "They find nothing. The grass springs slowly back over the shape it left behind.",
-      "prompt": "The forest closing back over the place, seen from high above: unbroken canopy, low cloud, no clearing anywhere. It keeps the secret.",
+      "prompt": "An empty meadow at dawn, grass springing slowly back over a broad shallow depression where something enormous rested. Forest all around, low cloud, no structure anywhere. Nothing left.",
       "image": null
     }
   },
