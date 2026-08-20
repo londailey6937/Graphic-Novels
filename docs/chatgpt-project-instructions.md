@@ -61,9 +61,20 @@ invented, and once invented it repeats, and then it is canon by accident.
 Two objects worn on the same limb will be confused with each other.]
 
 FIXED MARKS — true in every image, check before you deliver
-[MARKS — two or three deliberately checkable asymmetries, e.g. "the band is on
-the LEFT wrist, always" · "she has two throat ridges, not three" · "his sleeves
-are rolled". Faces are hard to compare by eye; marks are easy.]
+[MARKS — two or three details the model can actually hold and you can check at a
+glance. Use counts ("two throat ridges, never three"), presence ("sleeves always
+rolled"), shape or colour ("a brass buckle, never steel"), or exclusivity ("the
+band is the only thing on either forearm"). Do NOT use left/right — see
+LATERALITY below. Faces are hard to compare by eye; marks are easy.]
+
+LATERALITY — left and right are not instructable
+Do not distinguish two things by which side they are on. Image models treat
+mirrored images as equivalent, so handedness is not a stable property and will
+flip between images no matter how firmly it is stated. If two worn or carried
+objects must never be confused, they must differ in appearance, or live in
+different places on the body, or never appear in the same frame. Phrase the
+requirement as exclusivity — "the only thing on that forearm" — rather than as
+a side.
 
 STEP 0 — REFERENCE SHEETS, BEFORE ANY IMAGE
 For each recurring character, generate one sheet: full front, three-quarter and
@@ -239,6 +250,22 @@ The instinct is to regenerate until the art matches the document. The instinct i
 wrong and expensive. Amend the sheet to describe what you actually have, and it
 becomes canon from that point forward. Regenerate only when the art is
 *inconsistent with itself*.
+
+**Left and right are not instructable, so never make a rule out of them.** We
+declared a band on the left wrist and a watch on the right, and the model moved the
+watch between wrists for image after image, sometimes onto the band's own arm.
+Horizontal flips are standard training augmentation, so mirrored images are learned
+as equivalent and handedness never becomes stable; "left wrist" is ambiguous in
+language too — the character's left, or the camera's? A mark must be *obeyable* as
+well as checkable, and those are not the same property. Counts, presence, shape and
+exclusivity are obeyable. Sides are not.
+
+**A detail the art will not hold still, and the story does not need, should not be
+canon at all.** The rule above says the art wins when it disagrees with the sheet —
+but that is for details the art produces *consistently*. Our watch was the opposite:
+it arrived unbidden, never settled, and appeared nowhere in the prose. We wrote it
+into the cast anyway, and it cost a rule, a fixed mark and a recurring defect for
+nothing. The cheapest fix for a prop that keeps breaking is to delete the prop.
 
 **Order the anchors against the prose, not the shoot.** A storyboard invites
 resequencing for visual rhythm, and it is usually an improvement to look at. But if

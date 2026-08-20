@@ -10,12 +10,11 @@
   "characters": {
     "walt": "Man, late 50s, weathered and gaunt, curly grey-black hair, short grey beard, dirty olive work shirt with rolled sleeves, dark suspenders, canvas trousers. Three weeks unwashed in the woods. Carries almost nothing.",
     "visitor": "Tall gaunt humanoid, 6ft, unmistakably adult and unmistakably not human. Head, hands and feet bare; grey-green iridescent skin going ash at the fingers and toes, deeply creased and coarsely textured like weathered stone or dried kelp — never smooth, never youthful, never doll-like. Elongated cranial ridge sweeping back from the brow, two ridges at the throat, a mouth built slightly wrong, eyes large and dark and set deep in heavy sockets. Long thin limbs. From collarbone to ankle it wears a close-fitting dark travel membrane, matte and faintly ridged, like wet slate — not cloth and not skin. It is covered below the neck in every image.",
-    "band": "A silver cuff, close-fitting and softly rounded, with a row of small raised studs around its circumference. Worn on the VISITOR's LEFT wrist, and afterwards on WALT's LEFT wrist. It opens along a seam that was not visible before, and catches light like water.",
+    "band": "A silver cuff, close-fitting and softly rounded, with a row of small raised studs around its circumference. Worn first by the VISITOR, then by WALT. It opens along a seam that was not visible before, and catches light like water. It is the only thing either of them wears on a forearm.",
     "keeper": "Never a face. A presence rendered as warm layered light and shifting pressure in the air, filling a space the way weather fills a valley.",
     "kept": "A gallery of beings from many worlds, none human, none alike — some upright, some coiled, some barely more than light held in a shape. All calm. All at home.",
     "ship": "Not a hull. A low broad rise in a meadow, grass grown thick across curves too smooth for hillside, moss in patterns too even to be moss.",
-    "agents": "Unmarked vehicles, generator lights, silhouetted men with rifles and clipboards at a forest tree line. Faces never clear.",
-    "watch": "WALT wears an old analogue wristwatch with a round face on his RIGHT wrist — never the left, which is the band's. Scuffed, unremarkable, the one thing he still carries from before."
+    "agents": "Unmarked vehicles, generator lights, silhouetted men with rifles and clipboards at a forest tree line. Faces never clear."
   },
   "sections": [
     {
@@ -233,7 +232,7 @@
       "sec": "II",
       "role": "quad",
       "board_no": 6,
-      "intent": "He notices a silver band with small studs on its left wrist.",
+      "intent": "He notices a silver band with small studs at its wrist.",
       "prompt": "Night. Firelight on WALT's face as he sits keeping watch over the VISITOR, close enough to touch and not touching. Warm red light, cold black forest.",
       "image": null
     },
@@ -257,7 +256,7 @@
       "sec": "III",
       "role": "splash",
       "board_no": 9,
-      "intent": "Dawn. The band closes itself on Walt's left wrist.",
+      "intent": "Dawn. The band closes itself on Walt's wrist.",
       "prompt": "WALT on his knees, head thrown back, mouth open, one arm rigid as the impression lands in him. The VISITOR's body lies across the frame beside him. No blood, no wound — this is contact, not injury.",
       "image": null
     },
@@ -383,8 +382,7 @@
     }
   },
   "fixed_marks": [
-    "The band is on the LEFT wrist, always — on the visitor first, then on Walt.",
-    "Walt's watch is on his RIGHT wrist, never the left. The two are never on the same arm.",
+    "The band is the only thing on either of Walt's forearms. Nothing else is worn there.",
     "The visitor has TWO ridges at its throat, never three.",
     "Walt's sleeves are rolled and his rig sits on his belt, never on a shoulder strap."
   ]
