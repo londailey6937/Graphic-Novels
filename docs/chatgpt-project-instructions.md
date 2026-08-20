@@ -50,7 +50,9 @@ THE STANDARD — every image, no exceptions
 CAST
 [CAST — one line per recurring character: name in caps, then age, build, hair,
 face, wardrobe, and anything permanent. Include non-human characters and any
-object that recurs and must look the same, e.g. a specific band or weapon.]
+object that recurs and must look the same, e.g. a specific band or weapon.
+Every humanoid must state what covers it from collarbone to ankle, and must
+state that it is adult and how its skin is textured. See BODIES AND FACES.]
 
 FIXED MARKS — true in every image, check before you deliver
 [MARKS — two or three deliberately checkable asymmetries, e.g. "the band is on
@@ -128,6 +130,29 @@ TRANSITION RULES — how each image follows the last
 10. The picture test: a reader who cannot read the words should be able to follow
     the story from the images in order. Before you deliver, ask what this image
     tells such a reader that the previous one did not. That answer is the NEW field.
+
+BODIES AND FACES — the other classifier
+A refusal naming nudity or sexual content on a shot that contains neither is
+almost always one of two things, and both are fixed in the cast sheet, not in
+the individual order:
+
+  • NOTHING IS UNDESCRIBED BELOW THE NECK. Every character, human or not, has a
+    stated covering in the cast. A humanoid with no clothing described is drawn
+    bare, and a close portrait of a bare figure fills the frame with skin, which
+    is what gets scored. Give every non-human a covering that is part of its
+    design — a fitted membrane, plating, a wrap — not a costume.
+  • NOTHING IS SMOOTH, HAIRLESS AND LARGE-EYED WITHOUT BEING EXPLICITLY ADULT.
+    That combination reads as juvenile to a safety classifier, and the child-
+    safety guardrail reports under the same wording as nudity. Write age and
+    texture into the sheet: deeply creased, coarse, weathered, heavy-browed,
+    clearly adult, clearly not human. Never smooth, never doll-like.
+
+Do not write "no nudity" or "not sexual" into a prompt. Naming the category
+raises the score. Describe the covering and the texture affirmatively instead.
+
+Framing follows from the same logic: a close portrait crops to the face and ends
+at the jaw, with foliage, cloth or shadow closing the frame below it. Do not let
+a bare neck, collarbone or shoulder be the largest thing in a close shot.
 
 IF THE IMAGE IS REFUSED
 A refusal is usually about the surrounding context, not the shot you asked for.
