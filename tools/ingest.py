@@ -20,25 +20,49 @@ def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
 
+ANCHOR = re.compile(r"^\[IMAGE\s+([A-Za-z0-9_-]+)\s*\|\s*(splash|quad)\s*(?:\|\s*(.*?))?\]\s*$")
+
+
 def parse(path):
     raw = path.read_text().strip()
     title, body = path.stem.replace("-", " ").title(), raw
     m = re.match(r"#\s+(.+?)\n", raw)
     if m:
         title, body = m.group(1).strip(), raw[m.end():]
-    paras, cur, sections = [], [], []
+    paras, cur, sections, anchors = [], [], [], {}
+    pending, in_comment = None, False
     for line in body.split("\n"):
-        h = re.match(r"##\s+(.+)", line.strip())
+        a = ANCHOR.match(line.strip())
+        if a:                              # anchor binds to the next paragraph
+            pending = (a.group(1), a.group(2), (a.group(3) or "").strip())
+            continue
+        h = re.match(r"#{2,6}\s+(.+)", line.strip())
         if h:
-            sections.append((len(paras), h.group(1).strip()))
+            name = h.group(1).strip()
+            if name.lower() not in ("cast", "fixed marks", "story"):
+                sections.append((len(paras), name))
+            continue
+        t = line.strip()
+        if in_comment:                      # front-matter comment block
+            in_comment = "-->" not in t
+            continue
+        if t.startswith("<!--"):
+            in_comment = "-->" not in t
+            continue
+        if t.startswith(("- ", "* ")):      # cast / fixed-marks bullets
+            continue
+        if re.fullmatch(r"\*[^*]+\*", t):    # byline
             continue
         if line.strip():
+            if pending and not cur:
+                anchors[len(paras)] = pending
+                pending = None
             cur.append(line.strip())
         elif cur:
             paras.append(" ".join(cur)); cur = []
     if cur:
         paras.append(" ".join(cur))
-    return title, paras, sections
+    return title, paras, sections, anchors
 
 
 def main():
@@ -46,7 +70,7 @@ def main():
     if not args:
         sys.exit(__doc__)
     src = Path(args[0])
-    title, paras, secs = parse(src)
+    title, paras, secs, anchors = parse(src)
 
     if "--index" in sys.argv:
         for i, p in enumerate(paras):
@@ -58,8 +82,15 @@ def main():
     if not secs:
         secs = [(0, "I")]
     bounds = [s[0] for s in secs] + [len(paras)]
-    sections = [{"n": name, "blocks": [{"text": t} for t in paras[bounds[i]:bounds[i + 1]]]}
-                for i, (_, name) in enumerate(secs)]
+    sections = []
+    for i, (_, name) in enumerate(secs):
+        blocks = []
+        for j in range(bounds[i], bounds[i + 1]):
+            b = {"text": paras[j]}
+            if j in anchors:
+                b["art"] = anchors[j][0]
+            blocks.append(b)
+        sections.append({"n": name, "blocks": blocks})
 
     slug = slugify(title)
     dest = ROOT / "script" / f"{slug}.json"
@@ -68,7 +99,9 @@ def main():
         "style_bible": "",
         "characters": {},
         "sections": sections,
-        "panels": {},
+        "panels": {pid: {"sec": "", "role": role, "intent": intent,
+                         "prompt": "", "image": None}
+                   for pid, role, intent in anchors.values()},
     }
     if dest.exists():                       # never clobber an authored script
         old = json.loads(dest.read_text())
@@ -81,7 +114,7 @@ def main():
     words = sum(len(p.split()) for p in paras)
     print(f"ingested {src.name} -> {dest.relative_to(ROOT)}")
     print(f"  {title!r} · {len(sections)} section(s) · {len(paras)} paragraphs · {words} words")
-    print(f"  0 art anchors — run tools/coverage.py to see what needs art")
+    print(f"  {len(anchors)} art anchor(s) — run tools/coverage.py to audit coverage")
 
 
 if __name__ == "__main__":

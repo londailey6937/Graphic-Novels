@@ -9,7 +9,7 @@
   "characters": {
     "walt": "Man, late 50s, weathered and gaunt, curly grey-black hair, short grey beard, dirty olive work shirt with rolled sleeves, dark suspenders, canvas trousers. Three weeks unwashed in the woods. Carries almost nothing.",
     "visitor": "Emaciated humanoid, 6ft, grey-green iridescent skin going ash at the fingers and toes, elongated cranial ridge sweeping back, two ridges at the throat, a mouth built slightly wrong, large dark eyes, long thin limbs.",
-    "band": "A plain silver band at the visitor's wrist. It opens along a seam that was not visible before. Once on Walt it sits close to the skin and catches light like water.",
+    "band": "A plain silver band, unornamented, at the VISITOR's left wrist. It opens along a seam that was not visible before. Worn on WALT it sits close to the skin and catches light like water.",
     "keeper": "Never a face. A presence rendered as warm layered light and shifting pressure in the air, filling a space the way weather fills a valley.",
     "kept": "A gallery of beings from many worlds, none human, none alike — some upright, some coiled, some barely more than light held in a shape. All calm. All at home.",
     "ship": "Not a hull. A low broad rise in a meadow, grass grown thick across curves too smooth for hillside, moss in patterns too even to be moss.",
@@ -191,145 +191,174 @@
       "sec": "I",
       "role": "splash",
       "prompt": "WALT walking alone through vast old-growth Olympic rainforest, tiny against black trunks that rise out of frame. Rain in the air. He carries almost nothing and is walking away from everything.",
-      "image": null
+      "image": null,
+      "intent": "Walt walking alone, deep in the forest"
     },
     "p02": {
       "sec": "I",
       "role": "splash",
       "prompt": "WALT kneeling at a shallow creek, cupped hands lifted to drink, his eyes just risen off the water toward something out of frame right. Wet stone, nettle bank.",
-      "image": null
+      "image": null,
+      "intent": "kneeling to drink; he sees the shape"
     },
     "p03": {
       "sec": "II",
       "role": "splash",
       "prompt": "THE DISCOVERY. WALT kneeling in wet stone beside the VISITOR, which lies half-fallen into a bank of stinging nettle, arms folded wrong beneath it. High three-quarter angle. He is not afraid. He is attending.",
-      "image": "images/b7804011-5940-40d7-8ff5-1387bafc030b.png"
+      "image": null,
+      "intent": "the discovery"
     },
     "p04": {
       "sec": "II",
       "role": "quad",
       "prompt": "WALT crouching motionless, looking down at the VISITOR's face: a mouth built slightly wrong, foam at one corner, the two ridges at its throat, eyes closed.",
-      "image": null
+      "image": null,
+      "intent": "the visitor's face, close"
     },
     "p05": {
       "sec": "II",
       "role": "quad",
       "prompt": "WALT crouched building a small fire on wet ground at dusk, cupping the first flame, the VISITOR's body lying a few feet away in the nettles.",
-      "image": null
+      "image": null,
+      "intent": "building the fire at dusk"
     },
     "p06": {
       "sec": "II",
       "role": "quad",
       "prompt": "Night. Firelight on WALT's face as he sits keeping watch over the VISITOR, close enough to touch and not touching. Warm red light, cold black forest.",
-      "image": "images/6c.png"
+      "image": null,
+      "intent": "the night vigil"
     },
     "p07": {
       "sec": "II",
       "role": "quad",
       "prompt": "Dawn. The VISITOR's outflung hand lying still on wet stone, and the plain silver BAND at its wrist catching the first light.",
-      "image": "images/1c52ad28-fee0-441c-9409-b1dfaaa4d4f5.png"
+      "image": null,
+      "intent": "dawn; the band on the dead wrist"
     },
     "p08": {
       "sec": "III",
       "role": "splash",
       "prompt": "The silver BAND, open along a seam that was not there before, closing itself around WALT's wrist. His other hand is drawn back. It is putting itself on him; he is not doing it.",
-      "image": null
+      "image": null,
+      "intent": "the band closes on Walt's wrist"
     },
     "p09": {
       "sec": "III",
       "role": "splash",
       "prompt": "WALT on his knees, head thrown back, mouth open, one arm rigid as the impression lands in him. The VISITOR's body lies across the frame beside him. No blood, no wound — this is contact, not injury.",
-      "image": "images/10a.png"
+      "image": null,
+      "intent": "the impression lands"
     },
     "p10": {
       "sec": "III",
       "role": "quad",
       "prompt": "WALT sitting back on his heels beside the body at full morning, changed, turning his own wrist to look at the silver band on it.",
-      "image": null
+      "image": null,
+      "intent": "morning; he looks at his own wrist"
     },
     "p11": {
       "sec": "IV",
       "role": "quad",
       "prompt": "The same forest seen twice in one frame: dull and grey at the edges, impossibly sharp and saturated at the centre where WALT stands looking. His new sight.",
-      "image": null
+      "image": null,
+      "intent": "the world sharpens"
     },
     "p12": {
       "sec": "IV",
       "role": "quad",
       "prompt": "WALT waking at first light and immediately reaching to check his own wrist — feeling for the band, afraid it has been taken back in the night. Relief on his face when he finds it.",
-      "image": null
+      "image": null,
+      "intent": "waking; checking the band is still there"
     },
     "p13": {
       "sec": "IV",
       "role": "quad",
       "prompt": "WALT walking northwest with purpose for the first time, band bright at his wrist, a low grassy meadow opening ahead of him through the trees.",
-      "image": null
+      "image": null,
+      "intent": "walking northwest, with purpose"
     },
     "p14": {
       "sec": "V",
       "role": "splash",
       "prompt": "THE SHIP. A meadow where the grass grows too even, and in it a low broad rise forty yards across — curves too smooth for a hillside, moss lying in patterns too regular to be moss. WALT standing small at the tree line. No birds anywhere.",
-      "image": null
+      "image": null,
+      "intent": "the ship in the meadow"
     },
     "p15": {
       "sec": "V",
       "role": "splash",
       "prompt": "An opening standing wide in the grassed flank of the ship, warm amber light spilling out onto wet grass, WALT stepping through it. He does not look back.",
-      "image": null
+      "image": null,
+      "intent": "stepping through the opening"
     },
     "p16": {
       "sec": "V",
       "role": "splash",
       "prompt": "INSIDE: a long low gallery, dim and warm as a held hand, and standing along it THE KEPT — beings from many worlds, none human, none alike, some upright, some coiled, some barely light held in a shape. All of them calm. WALT small in the doorway.",
-      "image": null
+      "image": null,
+      "intent": "the gallery of the kept"
     },
     "p17": {
       "sec": "VI",
       "role": "quad",
       "prompt": "THE KEEPER arriving as weather: warm layered light and visible pressure filling the gallery, surrounding WALT completely, no face anywhere in it. He is entirely enclosed and entirely unharmed.",
-      "image": null
+      "image": null,
+      "intent": "the keeper arrives as weather"
     },
     "p18": {
       "sec": "VI",
       "role": "quad",
       "prompt": "The chord made visible: hundreds of small faint lights held together in one warm mass around WALT, each one a life she kept — and one of them, near him, newer and fainter than the rest.",
-      "image": null
+      "image": null,
+      "intent": "the chord of many lives, one new"
     },
     "p19": {
       "sec": "VI",
       "role": "quad",
       "prompt": "WALT weeping, lit from all sides by the keeper's warm light. Not fear. Relief. His face wide open for the first time in the story.",
-      "image": null
+      "image": null,
+      "intent": "Walt weeps"
     },
     "p20": {
       "sec": "VII",
       "role": "quad",
       "prompt": "Night at the forest tree line: unmarked vehicles, generator lights, silhouetted men holding rifles and clipboards, headlights driving into fog.",
-      "image": null
+      "image": null,
+      "intent": "headlights at the tree line"
     },
     "p21": {
       "sec": "VII",
       "role": "splash",
       "prompt": "WALT standing in the ship's lit threshold, backlit and small, looking back across the dark meadow at the headlights coming toward him. The whole choice held in one frame.",
-      "image": null
+      "image": null,
+      "intent": "the threshold; looking back"
     },
     "p22": {
       "sec": "VII",
       "role": "splash",
       "prompt": "The meadow empty. The ship simply no longer where it was, grass springing slowly back over the shape it left behind. Dawn coming on.",
-      "image": null
+      "image": null,
+      "intent": "the meadow empty"
     },
     "p23": {
       "sec": "VIII",
       "role": "splash",
       "prompt": "Men standing in the empty meadow at first light with flashlights and instruments, walking flattened grass, finding nothing at all.",
-      "image": null
+      "image": null,
+      "intent": "men find nothing"
     },
     "p24": {
       "sec": "VIII",
       "role": "splash",
       "prompt": "The forest closing back over the place, seen from high above: unbroken canopy, low cloud, no clearing anywhere. It keeps the secret.",
-      "image": null
+      "image": null,
+      "intent": "the forest closes over"
     }
-  }
+  },
+  "fixed_marks": [
+    "The band is on the LEFT wrist, always — on the visitor first, then on Walt.",
+    "The visitor has TWO ridges at its throat, never three.",
+    "Walt's sleeves are rolled and his rig sits on his belt, never on a shoulder strap."
+  ]
 }
