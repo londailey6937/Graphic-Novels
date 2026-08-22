@@ -8,3 +8,10 @@ build/
 __pycache__/
 *.pyc
 venv/
+
+# the editor keeps a plate it replaces; local undo, not history
+images/.replaced/
+
+# API keys — never commit these. This repo is public.
+.env
+.bfl-key

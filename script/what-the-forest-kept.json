@@ -6,11 +6,11 @@
     "slug": "what-the-forest-kept",
     "setting": "Olympic temperate rainforest, western Washington State — old-growth Douglas fir and hemlock, moss and nettle, wet stone, creek beds, low cloud and constant damp. Never any other mountain range or region."
   },
-  "style_bible": "Photoreal cinematic realism. Olympic temperate rainforest, overcast diffuse light, desaturated blue-green palette, deep shadow, wet stone and nettle. Interiors of the ship are warm, dim and amber against that cold exterior world. No lens flare, no text in image, natural film grain. Fill the entire frame edge to edge at the stated size: no letterbox bars, no black borders, no matte.",
+  "style_bible": "Photoreal cinematic realism. No lens flare, no text in image, natural film grain. Fill the entire frame edge to edge at the stated size: no letterbox bars, no black borders, no matte.",
   "characters": {
-    "walt": "Man, late 50s, weathered and gaunt, curly grey-black hair, short grey beard, dirty olive work shirt with rolled sleeves, dark suspenders, canvas trousers. Three weeks unwashed in the woods. Carries almost nothing.",
+    "walt": "Man, late 50s, weathered and gaunt, curly grey-black hair, short grey beard. Dirty olive work shirt with the sleeves rolled to the elbow, dark suspenders over it, dark canvas trousers soaked near-black from the knee down, worn dark leather belt, dark boots. Three weeks unwashed in the woods: mud to the thigh, grime worked into every crease, hair matted flat with rain. He carries one small dark canvas rucksack, low and flat on his back, with a tightly rolled bedroll lashed across the top of it and a single dark strap crossing his chest diagonally from left shoulder to right hip. No other bags, straps or webbing.",
     "visitor": "Tall gaunt humanoid, 6ft, unmistakably adult and unmistakably not human. Head, hands and feet bare; grey-green iridescent skin going ash at the fingers and toes, deeply creased and coarsely textured like weathered stone or dried kelp — never smooth, never youthful, never doll-like. Elongated cranial ridge sweeping back from the brow, two ridges at the throat, a mouth built slightly wrong, eyes large and dark and set deep in heavy sockets. Long thin limbs. From collarbone to ankle it wears a close-fitting dark travel membrane, matte and faintly ridged, like wet slate — not cloth and not skin. It is covered below the neck in every image.",
-    "band": "A silver cuff, close-fitting and softly rounded, with a row of small raised studs around its circumference. Worn first by the VISITOR, then by WALT. It opens along a seam that was not visible before, and catches light like water. It is the only thing either of them wears on a forearm.",
+    "band": "Not an object and not worn. A ring-shaped swelling in the wearer's own forearm, as if something living had been sealed under the skin just behind the wrist and the skin had closed over it. Nothing rests on the arm: no strap, no beads, no stones, no cord, no woven or braided material, no cuff, no bracelet, no bangle, no jewellery of any kind, no metal, no cast and no bandage. There is only the wearer's own unbroken skin, bulging in a smooth raised ring about two fingers wide the whole way around the forearm — taut and faintly shiny the way skin goes over a swelling — and the ordinary hair, dirt, freckles and creases of that arm continue straight across it without interruption, because it is that same skin. Low rounded shapes press up from underneath in a line, softening its surface; they are beneath the skin and never exposed. A dim iridescence turns over deep inside it, an oil-on-water green and violet seen dully through skin, never on top of it, casting no light onto the arm or anything around it. It is alive: the swelling shifts slowly, and the skin over it is warm and damp. Carried first by the VISITOR, in whose grey-green hide the same swelling reads as a darker raised ring, and afterwards by WALT. It is the only thing on either of their forearms.",
     "keeper": "Never a face. A presence rendered as warm layered light and shifting pressure in the air, filling a space the way weather fills a valley.",
     "kept": "A gallery of beings from many worlds, none human, none alike — some upright, some coiled, some barely more than light held in a shape. All calm. All at home.",
     "ship": "Not a hull. A low broad rise in a meadow, grass grown thick across curves too smooth for hillside, moss in patterns too even to be moss.",
@@ -25,7 +25,7 @@
           "art": "p01"
         },
         {
-          "text": "Three weeks of walking had worn the intention down to something duller than resolve — not quite doubt, but adjacent to it. He'd stopped counting days. He'd stopped, mostly, thinking in words at all. The forest had a way of doing that to a mind that came to it broken. It didn't console him. It didn't need to. It simply went on being enormous and indifferent, and there was a mercy in that indifference he hadn't expected.",
+          "text": "A week of walking had worn the intention down to something duller than resolve — not quite doubt, but adjacent to it. He'd stopped counting days. He'd stopped, mostly, thinking in words at all. The forest had a way of doing that to a mind that came to it broken. It didn't console him. It didn't need to. It simply went on being enormous and indifferent, and there was a mercy in that indifference he hadn't expected.",
           "art": "p02"
         },
         {
@@ -38,7 +38,7 @@
       "n": "II",
       "blocks": [
         {
-          "text": "Later, Walt would not be able to say how long he sat with it. The skin was grey-green going to ash at the extremities, a color no fever produced in anything born of Earth. Whatever it was, it had gone into the nettle bed either by accident or desperation, and its body had answered the ordinary poison of an ordinary plant the way no ordinary body should: catastrophically. Foam at the corner of a mouth built strangely, like a mouth that had been designed by someone who'd only heard mouths described. A pulse, faint, at a throat with two ridges where a throat should have one.",
+          "text": "Later, Walt would not be able to say how long he sat with it. The skin was grey-green going to ash at the extremities, a color no fever produced in anything born of Earth. Whatever it was, it had gone into the nettle bed either by accident or desperation, and its body had answered the ordinary poison of an ordinary plant the way no ordinary body should: the skin drawn tight and dark over every rib, wet-looking, lacquered, as if the poison had gone in and set. The mouth was shut in a hard lipless seam, built strangely, like a mouth that had been designed by someone who'd only heard mouths described. A pulse, faint, at a throat with two ridges where a throat should have one.",
           "art": "p04"
         },
         {
@@ -54,7 +54,7 @@
           "art": "p08"
         },
         {
-          "text": "Walt sat with the body until dawn found the silver band around its wrist and made it glint.",
+          "text": "Walt sat with the body until dawn found the band at its wrist — not metal, he saw then, and not worn. Grown. The grey-green of it was the grey-green of the arm it ringed, and something moved beneath it, slow, the way a breath moves under a blanket.",
           "art": "p06"
         }
       ]
@@ -63,15 +63,15 @@
       "n": "III",
       "blocks": [
         {
-          "text": "It should have stayed on the dead. Walt knew this the way you know things about other people's belongings — you don't take them. But when he reached out, not to steal, only to look, the band was already moving. It opened along a seam he hadn't seen and closed itself around his wrist with a small sound like a held breath finally let go.",
+          "text": "It should have stayed on the dead. Walt knew this the way you know things about other people's belongings — you don't take them. But when he reached out, not to steal, only to look, the band was already moving. It let go of the dead wrist and took his, and it did not fasten so much as arrive — its ends reaching, meeting, knitting, until there was no seam to find and the thing was simply part of him, warm as a mouth. Then it hummed. Not a sound in the air — a sound in the bone of his forearm, low and continuous and unmistakably alive, the way a struck wire goes on being struck.",
           "art": "p09"
         },
         {
-          "text": "There was no voice. He wants to be clear about that, later, in the only ways he has to be clear about anything — the tightening of a jaw, the specific stillness of a man remembering something he cannot say aloud. There was no voice. There was a pressure, an impression laid directly into the parts of him that language is built on top of, like a hand set flat against a window from the other side of the glass.",
+          "text": "There was no voice. He wanted to be clear about that, later, in the only ways he has to be clear about anything — the tightening of a jaw, the specific stillness of a man remembering something he cannot say aloud. There was no voice calling him. There was a pressure, an impression laid directly into the parts of him that language is built on top of, like a hand set flat against a window from the other side of the glass.",
           "art": "p10"
         },
         {
-          "text": "Not finished. Not yet finished. Come.",
+          "text": "A feeling permuted in the air. Not finished. Not yet finished. Come.",
           "art": "p13"
         },
         {
@@ -91,7 +91,7 @@
           "art": "p11"
         },
         {
-          "text": "He was afraid of none of this in the way you'd expect. He was afraid the way you're afraid of good news you don't trust — afraid that it would be taken back, that he would wake one morning stripped of it and left only with the knowing of what he'd had.",
+          "text": "He was afraid of none of this in the way you'd expect. He was afraid the way you're afraid of good news you don't trust — afraid that it would be taken back, that he would wake one morning stripped of it and left only with the knowing of what he'd had. So each morning he found it with his thumb before he opened his eyes, and each morning the hum was still there, and the little sheen of green and violet went on turning over under the skin like oil on water.",
           "art": "p12"
         },
         {
@@ -123,7 +123,7 @@
           "art": "p19"
         },
         {
-          "text": "He understood, standing there, without a single word being spoken to him, that this was not a laboratory. It was closer to a house that had never once, in all its ranging through the dark between worlds, turned anyone away at the door."
+          "text": "He understood, standing there, without a single word being spoken to him, that this was not a laboratory. It was closer to a home that had never once, in all its ranging through the dark between worlds, turned anyone away at the door."
         }
       ]
     },
@@ -151,7 +151,7 @@
           "text": "The agencies came the way agencies come — not with understanding, but with radar returns and thermal anomalies and a very ordinary human fear of anything they could not yet file a report on. Vehicles at the tree line. Voices on channels not meant for civilians. A meadow that had kept its secret for longer than any of their instruments, finally giving it up to men who would only ever see a threat where Walt had found the first mercy of his life."
         },
         {
-          "text": "He stood at the threshold of the ship as the tree line lit with approaching headlights, and understood, with a clarity the bracelet had given him and would now, in its own way, take back, that there was no version of tonight where he walked out to explain himself to men with rifles and forms to fill out. They would not believe the truth. They would not have room, in whatever story they told themselves about tonight, for a homeless man made whole by something that only ever wanted to keep him.",
+          "text": "He stood past the threshold of the ship as the tree line lit with approaching headlights, and understood, with a clarity the band had given him and would now, in its own way, take back, that there was no version of tonight where he walked out to explain himself to men with rifles and forms to fill out. They would not believe the truth. They would not have room, in whatever story they told themselves about tonight, for a homeless man made whole by something that only ever wanted to keep him.",
           "art": "p23"
         },
         {
@@ -161,7 +161,8 @@
           "text": "He looked back once — at the tree line, the lights, the country that had, in its way, already let him go months before any of this began — and then did not look back again."
         },
         {
-          "text": "The ship did not rise in fire or fury. It simply, unhurriedly, was no longer where it had been, the grass springing slowly back over the shape it left behind, the way grass forgets almost everything, given time."
+          "text": "The ship did not rise in fire or fury. It simply, unhurriedly, was no longer where it had been, the grass springing slowly back over the shape it left behind, the way grass forgets almost everything, given time.",
+          "art": "p25"
         }
       ]
     },
@@ -193,56 +194,101 @@
       "role": "splash",
       "board_no": 1,
       "intent": "Walt enters the Olympic rainforest. (He came here to die.)",
-      "prompt": "A gaunt weathered man in his late fifties walks alone through vast old-growth Olympic rainforest, small against black trunks that rise out of frame. A coiled rope is lashed to his pack. Dirty olive work shirt, sleeves rolled, dark suspenders, canvas trousers. Rain in the air, moss and fern, low cloud, no path.",
-      "image": null
+      "prompt": "A gaunt weathered man in his late fifties walks alone through vast old-growth Olympic rainforest, small against black trunks that rise out of frame. A coiled rope is lashed to his pack. Dirty olive work shirt, sleeves rolled, canvas trousers. Rain in the air, moss and fern, low cloud, no path along a stream bed.",
+      "image": "images/p01.png",
+      "seed": 2020711829,
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ]
     },
     "p02": {
       "sec": "I",
-      "role": "quad",
+      "role": "splash",
       "board_no": 2,
       "intent": "He approaches the creek.",
-      "prompt": "Seen from behind, the man walks down a rocky creek bed between dense green banks, shoulders low, a coiled rope on his pack. Water over stone ahead of him. Wet grey light.",
-      "image": null
+      "prompt": "Seen from behind, the man continues walking down a rocky creek bed between dense green banks, shoulders low, a coiled rope on his pack. Water over stone ahead of him. Wet grey light.",
+      "image": "images/p02.png",
+      "seed": 215789818,
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ]
     },
     "p03": {
       "sec": "I",
       "role": "quad",
       "board_no": 3,
       "intent": "He spots something unfamiliar.",
-      "prompt": "Close on the man's face as he stops walking, caught mid-step, looking at something out of frame. Rain on his skin, three weeks of beard, exhaustion and sudden attention together.",
-      "image": null
+      "prompt": "Close on the man's face as he kneels over the stream, looking at something out of frame. Rain on his skin, one week of beard, exhaustion and sudden attention together.",
+      "image": "images/p03.png",
+      "seed": 788133543,
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ]
     },
     "p04": {
       "sec": "II",
       "role": "splash",
       "board_no": 4,
       "intent": "A closer look reveals an alien, half-fallen into a bank of stinging nettle.",
-      "prompt": "A tall gaunt non-human body lies half-fallen into a dense bank of stinging nettle beside a creek. Grey-green skin, deeply creased and coarsely textured like weathered stone, going ash at the fingers and toes. Long thin limbs, elongated cranial ridge sweeping back, two ridges at the throat. Still, unmarked, at rest. Wet leaves across it.",
-      "image": null
+      "prompt": "A tall gaunt non-human body lies half-fallen into a dense bank of stinging nettle beside a creek. Grey-green skin, deeply creased and coarsely textured like weathered stone, going ash at the fingers and toes. Long thin limbs, elongated cranial ridge sweeping back, two ridges at the throat. Still, unmarked, at rest. Wet leaves across it. The mouth shut in a hard lipless seam, built strangely. The body fills the frame from head to thigh, seen from above, close.",
+      "image": "images/p04.png"
     },
     "p05": {
       "sec": "II",
-      "role": "quad",
+      "role": "splash",
       "board_no": 5,
       "intent": "Walt examines the alien.",
-      "prompt": "The man crouches over the still non-human figure in the nettles, one hand hovering near its arm, studying it closely without fear. Overcast forest light, wet stone underfoot.",
-      "image": null
+      "prompt": "The man crouches over the still non-human figure in the nettles, one hand hovering near its arm, studying it closely without fear. The band is plainly visible on the non-human figure's near forearm, raised under its grey-green skin, and his eyes are on it. Overcast forest light, wet stone underfoot.",
+      "image": "images/p05.png",
+      "refs": [
+        "images/ref/walt-inworld-figure.png",
+        "images/ref/walt-inworld-face.png",
+        "images/ref/walt-3q-left.png",
+        "images/p04.png",
+        "images/p08.png",
+        "images/p09.png"
+      ],
+      "ref_clause": "Images 1 to 3 are the living man in this picture — the same face, the same olive shirt and suspenders. Images 4 and 5 are the non-human body he is crouched over: the same grey-green weathered hide, the same head and build, lying in the nettles. Image 6 is the reference for the swelling in the forearm: reproduce exactly that — the arm's own skin raised in a ring, the same hair and dirt running across it, the same dim iridescence under the surface. It is not an object and nothing is worn on the arm. Here it is in the non-human arm, in that arm's own darker hide.",
+      "seed": 1021858161,
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ]
     },
     "p06": {
       "sec": "II",
       "role": "quad",
       "board_no": 6,
       "intent": "He notices a silver band with small studs at its wrist.",
-      "prompt": "Macro of the non-human figure's forearm and wrist lying still among wet nettle leaves. A close-fitting silver cuff with a row of small raised studs encircles the wrist, catching the flat grey light like water.",
-      "image": null
+      "prompt": "Macro of the non-human figure's forearm and wrist lying still among wet nettle leaves. A close-fitting narrow cuff of grey-green living tissue rings the wrist, its edges grown into the skin, a row of small rounded nodules sitting just beneath its damp translucent surface. Matte, wet-skinned, drinking the flat grey light.",
+      "image": "images/p06.png",
+      "seed": 914056227,
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ],
+      "refs": [
+        "images/p04.png",
+        "images/p08.png",
+        "images/p09.png"
+      ],
+      "ref_clause": "Images 1 and 2 are the non-human body this forearm belongs to: the same grey-green weathered hide, deeply creased, going ash at the fingers. There is no human being anywhere in this picture. Image 3 is the reference for the swelling in the forearm: reproduce exactly that — the arm's own skin raised in a ring, the same hair and dirt running across it, the same dim iridescence under the surface. It is not an object and nothing is worn on the arm. Here it is in the non-human arm, in that arm's own darker grey-green hide."
     },
     "p07": {
       "sec": "II",
-      "role": "quad",
+      "role": "splash",
       "board_no": 7,
       "intent": "He remains with it as night falls.",
-      "prompt": "Night in the forest. A small fire burns low on wet ground. The man sits beside it keeping watch over the still figure lying a few feet away in the nettles. Warm red firelight on his face, cold black forest beyond.",
-      "image": null
+      "prompt": "Night in the forest. A small fire burns low on wet ground. The man sits beside it keeping watch over the still figure lying a few feet away in the nettles. Warm red firelight on his face, cold black forest beyond. Wide, both figures in frame, the low fire between them, seen from slightly above.",
+      "image": "images/p07.png"
     },
     "p08": {
       "sec": "II",
@@ -250,39 +296,72 @@
       "board_no": 8,
       "intent": "Its breathing grows shallow. Then, it stops.",
       "prompt": "Close portrait of the non-human face at rest among rain-wet nettle, eyes closed, the last breath gone out of it. Deeply creased weathered skin, heavy brow, deep sockets, elongated cranial ridge. Absolutely still. Night giving way to first grey light.",
-      "image": null
+      "image": "images/p08.png"
     },
     "p09": {
       "sec": "III",
       "role": "splash",
       "board_no": 9,
       "intent": "Dawn. The band closes itself on Walt's wrist.",
-      "prompt": "Dawn. Macro of the man's bare human forearm, and the silver studded cuff closing itself around his wrist along a seam. His other hand is drawn back. The band is moving; he is not moving it. Wet stone and nettle behind.",
-      "image": null
+      "prompt": "Dawn. Macro of the man's bare human forearm, and the grey-green living cuff drawing itself closed around his wrist, its two ends reaching and knitting into one another like healing flesh. His other hand is drawn back. The band is moving; he is not moving it. Wet stone and nettle behind.",
+      "image": "images/p09.png",
+      "seed": 1239017673,
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ]
     },
     "p10": {
       "sec": "III",
       "role": "quad",
       "board_no": 10,
       "intent": "He looks at the band, feeling its presence.",
-      "prompt": "The man sits back on his heels in the wet forest at full morning, turning his own forearm to look at the silver studded cuff now on it. Changed, quiet, uncertain.",
-      "image": null
+      "prompt": "The man sits back on his heels in the wet forest at full morning, turning his own forearm to look at the grey-green living cuff now grown onto it, the skin of his forearm standing up in a slow ridge over it. Changed, quiet, uncertain.",
+      "image": "images/p10.png",
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ],
+      "refs": [
+        "images/ref/walt-inworld-figure.png",
+        "images/ref/walt-inworld-face.png",
+        "images/ref/walt-3q-left.png",
+        "images/ref/walt-3q-right.png",
+        "images/p09.png"
+      ],
+      "ref_clause": "Images 1 to 4 are this man — the same face, the same olive shirt and suspenders, the same pack carried the same way. Do not redesign his clothing or his kit. Image 5 is the reference for the swelling in the forearm: reproduce exactly that — the arm's own skin raised in a ring, the same hair and dirt running across it, the same dim iridescence under the surface. It is not an object and nothing is worn on the arm.",
+      "source": "hand-picked edit, not a render — no seed reproduces this plate"
     },
     "p11": {
       "sec": "IV",
       "role": "quad",
       "board_no": 11,
       "intent": "His perception sharpens. He notices things he hadn't before.",
-      "prompt": "The forest rendered with impossible clarity: every needle, water bead and moss filament sharp and saturated at the centre of frame where the man stands looking, the edges of the image duller and greyer. His new sight.",
-      "image": null
+      "prompt": "Extreme macro of a spider's web strung between fern fronds, every radial thread hung with water beads, each bead holding a point of grey daylight, impossibly sharp and saturated against a soft dark green forest falling away behind. His new sight, in one small object. Extreme macro, filling the frame edge to edge, no human figure anywhere.",
+      "image": "images/p11.png"
     },
     "p12": {
       "sec": "IV",
       "role": "quad",
       "board_no": 12,
       "intent": "That morning, awake, he checks the band.",
-      "prompt": "Macro of the man's hands at first light, one turning the silver studded cuff on the opposite forearm, checking it is still there. Weathered knuckles, dirt in the creases, relief in the grip.",
-      "image": null
+      "prompt": "Macro of the man's hands at first light, one thumb pressed to the grey-green living cuff on the opposite forearm, checking it is still there, the nodules shifting faintly under its damp surface. Weathered knuckles, dirt in the creases, relief in the grip.",
+      "image": "images/p12.png",
+      "seed": 1172621969,
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ],
+      "refs": [
+        "images/ref/walt-inworld-figure.png",
+        "images/ref/walt-inworld-face.png",
+        "images/ref/walt-3q-left.png",
+        "images/p09.png"
+      ],
+      "ref_clause": "Images 1 to 3 are this man and his kit; match that face and those hands. Image 4 is the reference for the swelling in the forearm: reproduce exactly that — the arm's own skin raised in a ring, the same hair and dirt running across it, the same dim iridescence under the surface. It is not an object and nothing is worn on the arm."
     },
     "p13": {
       "sec": "III",
@@ -290,23 +369,37 @@
       "board_no": 13,
       "intent": "He feels the impression: “Not finished. Not yet finished. Come.”",
       "prompt": "Close on the man's face, eyes closed, head slightly back, receiving something wordless. Faint warm light touching him from no visible source. Wet forest behind, out of focus.",
-      "image": null
+      "image": "images/p13.png"
     },
     "p14": {
       "sec": "IV",
       "role": "quad",
       "board_no": 14,
       "intent": "The impression calls him onward.",
-      "prompt": "A vast web of small golden lights suspended in dark forest air, threads of warm light branching and connecting outward, drawing the eye northwest. No figures. Deep green-black background.",
-      "image": null
+      "prompt": "A vast web of small golden lights suspended in dark forest air, threads of warm light branching and connecting outward, drawing the eye northwest. No figures. Deep green-black background. The man small and centred, seen from behind, dwarfed by the trunks on both sides.",
+      "image": "images/p14.png"
     },
     "p15": {
       "sec": "IV",
       "role": "quad",
       "board_no": 15,
       "intent": "He looks at the band again, understanding.",
-      "prompt": "The man stands still in the forest looking down at the silver studded cuff on his forearm, understanding settling into his face. Overcast light, wet foliage.",
-      "image": null
+      "prompt": "The man stands still in the forest looking down at the narrow grey-green living band on his forearm, understanding settling into his face. Overcast light, wet foliage. Medium close, framed from the thighs up, the band clearly readable on his forearm, two fingers wide, no wider, a ridge standing up under the skin above it.",
+      "image": "images/p15.png",
+      "seed": 1884665077,
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ],
+      "refs": [
+        "images/ref/walt-inworld-figure.png",
+        "images/ref/walt-inworld-face.png",
+        "images/ref/walt-3q-left.png",
+        "images/ref/walt-3q-right.png",
+        "images/p09.png"
+      ],
+      "ref_clause": "Images 1 to 4 are this man — same face, same shirt, suspenders, trousers and boots, same pack. Image 5 is the reference for the swelling in the forearm: reproduce exactly that — the arm's own skin raised in a ring, the same hair and dirt running across it, the same dim iridescence under the surface. It is not an object and nothing is worn on the arm."
     },
     "p16": {
       "sec": "IV",
@@ -314,76 +407,124 @@
       "board_no": 16,
       "intent": "He sets out, walking northwest.",
       "prompt": "Seen from behind, the man walks away into deep forest with purpose for the first time, pack on his back, heading northwest between huge mossed trunks. Shafts of grey light.",
-      "image": null
+      "image": "images/p16.png"
     },
     "p17": {
       "sec": "V",
       "role": "splash",
       "board_no": 17,
       "intent": "He is led to it. Not a hull so much as a held breath in the land itself.",
-      "prompt": "A meadow where the grass grows too even, and in it a low broad rise forty yards across — curves too smooth for a hillside, thick moss lying in patterns too regular to be moss. Not a hull, a held breath in the land. Grey overcast, no birds.",
-      "image": null
+      "prompt": "A meadow where the grass grows too even, and in it a low broad rise forty yards across — curves too smooth for a hillside, thick moss lying in patterns too regular to be moss. Not a hull, a held breath in the land. Grey overcast, no birds. Wide landscape, no human figure, the long rise running diagonally across the frame.",
+      "image": "images/p17.png"
     },
     "p18": {
       "sec": "V",
       "role": "quad",
       "board_no": 18,
       "intent": "He finds the entrance.",
-      "prompt": "A dark oval opening in the mossed flank of the buried shape, ferns and moss growing to its edge. The man stands small before it with his back to us, about to enter.",
-      "image": null
+      "prompt": "A dark oval opening in the mossed flank of the buried shape, ferns and moss growing to its edge. The man stands small before it with his back to us, about to enter. The man small in the lower frame, seen from behind, the dark opening ahead and above him.",
+      "image": "images/p18.png"
     },
     "p19": {
       "sec": "V",
       "role": "splash",
       "board_no": 19,
       "intent": "He sees the kept — none human, none alike, some upright, some coiled, some barely light held in a shape.",
-      "prompt": "Inside a long low gallery, dim and warm as a held hand, amber light from unseen sources. Along it stand the kept: beings from many worlds, none human and none alike — some upright, some coiled, one barely light held in a shape, one translucent and drifting. All of them calm. The man small among them.",
-      "image": null
+      "prompt": "Inside a long low gallery, dim and warm as a held hand, amber light from unseen sources. Along it stand the kept: beings from many worlds, none human and none alike — some upright, some coiled, one barely light held in a shape, one translucent and drifting. All of them calm. The man small among them. The man seen from behind, small in the lower frame, the gallery opening out ahead of him.",
+      "image": "images/p19.png",
+      "setting": "interior"
     },
     "p20": {
       "sec": "VI",
       "role": "splash",
       "board_no": 20,
       "intent": "She comes to him the way weather comes — light and pressure filling the room. He never sees a face.",
-      "prompt": "A burst of warm layered light fills the domed gallery, pressure made visible in the air, radiating outward and enclosing the small figure of the man standing beneath it. No face anywhere in it. Amber and gold against dim bronze walls.",
-      "image": null
+      "prompt": "A burst of warm layered light fills the domed gallery, pressure made visible in the air, radiating outward and enclosing the small figure of the man standing beneath it. No face anywhere in it. Amber and gold against dim bronze walls. The man small and centred, seen from behind, the light filling the space above and around him.",
+      "image": "images/p20.png",
+      "setting": "interior"
     },
     "p21": {
       "sec": "VI",
       "role": "quad",
       "board_no": 21,
       "intent": "He understands it: hundreds of faint lights, one new and his.",
-      "prompt": "The man stands amid hundreds of small faint warm lights suspended around him at every depth, each one a life. One light near him is newer and fainter than the rest. Warm dark gallery.",
-      "image": null
+      "prompt": "The man stands amid hundreds of small faint warm lights suspended around him at every depth, each one a life. One light near him is newer and fainter than the rest. Warm dark gallery. The man seen from behind, head and shoulders low in the frame, hundreds of small lights above him.",
+      "image": "images/p21.png",
+      "setting": "interior"
     },
     "p22": {
       "sec": "VI",
       "role": "splash",
       "board_no": 22,
       "intent": "The specific, unbearable relief of being seen by something that did not require him to have turned out well. He weeps.",
-      "prompt": "The man weeps, one hand pressed over his eyes, lit from all sides by warm amber light. Not fear — relief. His face wide open for the first time.",
-      "image": null
+      "prompt": "The man weeps, one hand pressed over his eyes, lit from all sides by warm amber light. Not fear — relief. His face wide open for the first time. The band rings his right forearm just below the wrist, grown into the skin, dark and damp, taking the amber light without returning it.",
+      "image": "images/p22.png",
+      "setting": "interior",
+      "seed": 1314036267,
+      "model": "flux-2-max",
+      "size": [
+        1600,
+        2000
+      ],
+      "refs": [
+        "images/ref/walt-inworld-figure.png",
+        "images/ref/walt-inworld-face.png",
+        "images/ref/walt-3q-left.png",
+        "images/p09.png"
+      ],
+      "ref_clause": "Images 1 to 3 are this man; match that face. Image 4 is the reference for the swelling in the forearm: reproduce exactly that — the arm's own skin raised in a ring, the same hair and dirt running across it, the same dim iridescence under the surface. It is not an object and nothing is worn on the arm."
     },
     "p23": {
       "sec": "VII",
       "role": "splash",
       "board_no": 23,
       "intent": "He stands at the threshold as the tree line lights with approaching headlights. Unmarked vehicles. Men with rifles and forms. Channels not meant for civilians.",
-      "prompt": "The man stands silhouetted in the lit oval threshold of the buried ship, looking back across a dark wet meadow at approaching headlights. Unmarked vehicles and generator lights at the tree line, silhouetted figures with rifles. Rain, night, reflected light on wet grass.",
-      "image": null
+      "prompt": "The man stands silhouetted in the lit oval threshold of the buried ship, looking back across a dark wet meadow at approaching headlights. Unmarked vehicles and generator lights at the tree line, silhouetted figures with rifles. Rain, night, reflected light on wet grass. The man seen from behind, low in the frame and silhouetted, the oval threshold framing the forest beyond.",
+      "image": "images/p23.png",
+      "setting": "interior"
     },
     "p24": {
       "sec": "VIII",
       "role": "splash",
       "board_no": 24,
       "intent": "They find nothing. The grass springs slowly back over the shape it left behind.",
-      "prompt": "An empty meadow at dawn, grass springing slowly back over a broad shallow depression where something enormous rested. Forest all around, low cloud, no structure anywhere. Nothing left.",
-      "image": null
+      "prompt": "An empty meadow at dawn, grass springing slowly back over a broad shallow depression where something enormous rested. Forest all around, low cloud, no structure anywhere. Nothing left. Wide, no human figure anywhere, the shallow depression centred in the frame.",
+      "image": "images/p24.png"
+    },
+    "p25": {
+      "sec": "VII",
+      "role": "splash",
+      "board_no": 25,
+      "intent": "The ship leaves — simply no longer where it had been.",
+      "prompt": "The buried ship lifts clear of the forest floor without flame or sound, a vast dark ribbed ellipse hanging just above the hollow it made, ferns and moss springing slowly back beneath it. Old-growth trunks all around, low cloud, wet green light. Wide, no human figure, the ship filling the upper half of the frame above the hollow it made.",
+      "image": "images/p25.png"
     }
   },
   "fixed_marks": [
-    "The band is the only thing on either of Walt's forearms. Nothing else is worn there.",
     "The visitor has TWO ridges at its throat, never three.",
-    "Walt's sleeves are rolled and his rig sits on his belt, never on a shoulder strap."
-  ]
+    "Walt's sleeves are rolled and his rig sits on his belt, never on a shoulder strap.",
+    "No structure, light or man-made object appears in any exterior frame — the forest is empty of people but Walt."
+  ],
+  "reference_set": [
+    "images/ref/walt-inworld-figure.png",
+    "images/ref/walt-kit-behind.png",
+    "images/ref/walt-inworld-face.png",
+    "images/ref/walt-front.png",
+    "images/ref/walt-3q-left.png",
+    "images/ref/walt-profile-left.png",
+    "images/ref/walt-3q-right.png",
+    "images/ref/walt-profile-right.png"
+  ],
+  "style_by_setting": {
+    "exterior": "Olympic temperate rainforest, overcast diffuse light, cold and wet. Desaturated blue-green palette, deep shadow, wet stone and nettle. The forest is uninhabited: no buildings, cabins, huts, roads, trails, fences, signs or vehicles, and no artificial light of any kind. No warm light anywhere in the frame.",
+    "interior": "Inside the buried ship: warm, dim and amber, close and organic, lit only by the ship itself against the cold world outside."
+  },
+  "continuity": {
+    "band": {
+      "from_board": 9,
+      "before": "Walt's own forearms are both bare — nothing on either of his wrists or forearms. This says nothing about the VISITOR, who carries the band from the first frame it appears in.",
+      "mark": "The band is the only thing on either of Walt's forearms — raised out of the skin of the one it rings, with nothing else on either arm."
+    }
+  },
+  "reference_clause": "Image 1 shows this man and his kit, and is the authority for both: he is the same man, wearing and carrying exactly what he wears and carries there — the same dirty olive shirt and dark suspenders, the same dark trousers, belt and boots, the same dark rucksack carried the same way, the same bedroll and rope in the same place on it. Image 2 shows that pack and rope from behind; match it exactly. Image 3 shows his face in this light. Images 4 to {last} show the same face from other angles. Do not redesign his clothing, his pack or his kit."
 }

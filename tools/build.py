@@ -1,12 +1,21 @@
 #!/usr/bin/env python3
 """Compose a graphic novel from script/*.json + images/ into build/index.html.
 
+    python3 tools/build.py                                  # the current script
+    python3 tools/build.py script/what-the-forest-kept.json
+    python3 tools/build.py script/act1.json                 # an earlier draft
+
 Panels with an `image` render as art. Panels without one render as an ART ORDER
 card showing their generation prompt -- so the same build is both the reading
 mockup and the brief for the art still to be made.
+
+A story script carries sections and panels; the earlier drafts carry pages already.
+`pages.adapt` takes either and returns pages, so one command builds both.
 """
 import base64, json, mimetypes, re, sys
 from pathlib import Path
+
+import pages as pages_mod
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT  = ROOT / "build" / "index.html"
@@ -61,10 +70,36 @@ def markup(s):
     """*emphasis* -> <em>, preserving escaping."""
     return re.sub(r"\*(.+?)\*", r"<em>\1</em>", esc(s))
 
+MAX_EDGE, JPEG_Q = 1600, 80     # the page is 1600 design units wide; matches read.py
+
+
+FULL = False                    # --full: inline plates at full size, for print
+
+
 def data_uri(rel):
+    """Inline an image, downscaled to the page it will be seen on.
+
+    The plates are 2432x3040 because that is 304dpi on the trim, and inlining 24
+    of them makes a ~200MB file to hand someone a screen prototype. The longest
+    edge a panel is ever *displayed* at is the page itself, so that is the cap.
+    `--full` restores full-size embedding for the print path."""
     p = ROOT / rel
     if not p.exists():
         return None
+    if not FULL:
+        try:
+            import io
+            from PIL import Image
+            im = Image.open(p).convert("RGB")
+            w, h = im.size
+            if max(w, h) > MAX_EDGE:
+                k = MAX_EDGE / max(w, h)
+                im = im.resize((round(w * k), round(h * k)), Image.LANCZOS)
+            buf = io.BytesIO()
+            im.save(buf, "JPEG", quality=JPEG_Q, optimize=True, progressive=True)
+            return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
+        except ImportError:
+            pass
     mime = mimetypes.guess_type(p.name)[0] or "image/png"
     return f"data:{mime};base64," + base64.b64encode(p.read_bytes()).decode()
 
@@ -204,9 +239,13 @@ def plate(data):
 
 
 def main():
+    global FULL
     embed = "--embed" in sys.argv
-    data = json.loads((ROOT / "script" / "act1.json").read_text())
+    FULL = "--full" in sys.argv
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    src = Path(args[0]) if args else ROOT / "script" / "what-the-forest-kept.json"
     tpl = json.loads((ROOT / "script" / "template.json").read_text())
+    data = pages_mod.adapt(json.loads(src.read_text()), tpl)
     m = data["meta"]
     # trim is declared in template.json; page_w/page_h are design units, not inches
     pr = tpl.get("print", {})

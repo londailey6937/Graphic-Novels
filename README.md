@@ -7,8 +7,12 @@ python3 tools/ingest.py   stories/my-story.md          # story -> script skeleto
 #   ... an AI pass places the art anchors and writes the orders ...
 python3 tools/coverage.py script/my-story.json         # what still needs art
 python3 tools/read.py     script/my-story.json         # the reading edition
-python3 tools/build.py                                 # the panel edition + PDF
+python3 tools/build.py    script/my-story.json         # the panel edition
+./tools/export-pdf.sh     script/my-story.json         # print-ready PDF
 ```
+
+Every tool takes the script as its argument and defaults to the current one, so a
+second story needs no edits anywhere — only its own `script/<slug>.json`.
 ```
 stories/             drop stories here (.md or .txt)
 script/<slug>.json   one script per story: meta, sections -> blocks, panels
@@ -18,9 +22,14 @@ images/ref/          canonical character sheets — the likeness authority
 docs/likeness.md     keeping a face the same face across panels (ChatGPT workflow)
 tools/ingest.py      story -> script skeleton
 tools/coverage.py    audits art coverage; requests what's missing
+tools/pages.py       panels -> pages: the grammar, the layouts, the caption slots
+tools/edit.py        edit the prose against the pictures, in a browser
+tools/render.py      panel prompt -> FLUX.2 -> images/<id>.png, seed recorded
 tools/read.py        prose + images -> build/read.html   (reading edition)
 tools/build.py       script + images -> build/index.html (panel edition)
+tools/board.py       script + images -> build/board.html (contact sheet)
 tools/art-orders.py  script -> build/art-orders.md (prompts for missing panels)
+tools/flux-prompts.py script -> build/flux-prompts.md (Flux-ready, style inlined)
 tools/export-pdf.sh  build -> print-ready PDF, one comic page per PDF page
 tools/debar.py       strip painted letterbox bars off a render, file it as a panel
 ```
@@ -63,10 +72,88 @@ Both are now panels. **The pagination constraint found the missing images.**
 python3 tools/read.py             # the reading edition
 python3 tools/read.py --embed     # self-contained, for sharing (needs Pillow)
 python3 tools/build.py            # the panel edition (links to images/)
+python3 tools/board.py            # the contact sheet (thumbnails, needs Pillow)
+python3 tools/pages.py            # the pagination, without building anything
 python3 tools/art-orders.py       # what art is still missing, as prompts
 python3 tools/build.py --embed    # single self-contained file, for sharing
-./tools/export-pdf.sh             # build/what-the-forest-kept-act1.pdf
+./tools/export-pdf.sh             # build/what-the-forest-kept.pdf
 ```
+
+`--embed` inlines the art at screen size — the longest edge a panel is ever
+displayed at is the page itself (1600 units), so that is the cap. It makes an
+8–9MB file you can hand someone. The plates in `images/` stay untouched at
+2432×3040; `--full` inlines them at that size instead, which is what
+`export-pdf.sh` wants and what makes a ~200MB file. Screen work never needs it.
+
+## Rendering
+
+```sh
+export BFL_API_KEY=...
+python3 tools/render.py p26              # one panel
+python3 tools/render.py --missing        # every panel with no art
+python3 tools/render.py p26 --seed 41234 # reproduce an earlier frame
+python3 tools/render.py p26 --dry-run    # show the request, send nothing
+```
+
+Also a **Render with FLUX** button on every panel in the editor, so a prompt can
+be written and answered without leaving the page.
+
+Three things it does that a chat window cannot:
+
+* **The prompt is assembled, not retyped.** Panel prompt plus the style bible,
+  the same way `flux-prompts.py` emits it. Consistency across panels comes from
+  repeating those blocks verbatim.
+* **The reference set is attached every time.** `reference_set` in the script
+  (up to 8 images) is what holds a face across frames — text sheets describe
+  wardrobe, they cannot describe a likeness.
+* **The seed is written back into the script.** A frame you can regenerate is a
+  frame you can improve: change one variable and hold everything else.
+
+Two defaults are deliberate. Seeds are always explicit — if you do not pass one,
+a random seed is chosen locally and recorded, rather than letting the server pick
+one you never learn. And **prompt upsampling is off**: `[pro]` and `[max]` rewrite
+your prompt before generating unless told not to, and that rewrite is not
+deterministic, so it defeats the seed. `--upsample` turns it back on when you
+want the model's help finding a composition.
+
+## Editing the story against the pictures
+
+```sh
+python3 tools/edit.py             # opens the editor on the current script
+```
+
+Every paragraph in reading order, beside the panel it is anchored to. Change the
+prose, move it to a different panel, move the caption to a different corner, mark
+the line the page turns on. Save, or save and rebuild without leaving the page.
+
+It exists because of an asymmetry worth stating plainly: **a picture is expensive
+to change and a sentence is cheap.** When a frame comes back not quite matching
+its caption, the caption is almost always the cheaper thing to move.
+
+And it is the only place one failure is visible. The reading edition prints every
+paragraph; the panel edition prints only what a panel carries, so **prose with no
+anchor silently never reaches the panel edition** — a story can look finished in
+one edition and stop short in the other. The editor counts those paragraphs at the
+top of the page and flags each one in place. That count reaching zero is what it
+means for the panel edition to tell the whole story.
+
+## Two shapes, one story
+
+The reading edition walks prose. The panel edition walks *pages*, and a page is a
+layout plus slots. [tools/pages.py](tools/pages.py) is the only place that crossing
+is made, so both editions and the audit agree by construction.
+
+It paginates in **prose order — the order the anchors appear in the text**, not
+`board_no`. The two differ wherever an anchor was moved against the prose, and
+paginating by board order would put the book in a sequence `coverage.py` never
+audited. `board_no` orders the contact sheet; the prose orders the book.
+
+Captions are *placed*, never written: one caption per anchored block, verbatim, in
+document order. Splitting a paragraph into shorter caption boxes is an editorial
+act, so it belongs in the script — split the block there and both editions follow.
+
+A script that already carries `pages` (the earlier drafts do) passes through
+untouched, so one command builds either generation.
 
 Panels without an `image` render as a hatched **ART ORDER** card printing their own
 prompt. So an unfinished build is still readable end to end — pacing, caption

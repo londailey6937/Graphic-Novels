@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Emit build/art-orders.md: one paste-ready generation prompt per missing panel.
 
+    python3 tools/art-orders.py                                  # the current script
+    python3 tools/art-orders.py script/what-the-forest-kept.json
+
 Every prompt is prefixed with the style bible and any character sheets it needs,
 because consistency across panels comes from repeating those two blocks verbatim
 -- not from remembering what you typed last time.
@@ -16,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build import grid_of
+import pages as pages_mod
 
 ROOT = Path(__file__).resolve().parent.parent
 TPL = json.loads((ROOT / "script" / "template.json").read_text())
@@ -27,7 +31,9 @@ PRINT = TPL.get("print", {})
 SHEETS = TPL.get("reference_sheets", {})
 MARKS = TPL.get("fixed_marks", [])
 LONG_EDGE = max(STD_W, STD_H)
-data = json.loads((ROOT / "script" / "act1.json").read_text())
+_args = [a for a in sys.argv[1:] if not a.startswith("--")]
+_src = Path(_args[0]) if _args else ROOT / "script" / "what-the-forest-kept.json"
+data = pages_mod.adapt(json.loads(_src.read_text()), TPL)
 m, chars = data["meta"], data["characters"]
 GUT = m.get("gutter", 14)
 

@@ -20,12 +20,32 @@ def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+THUMB_W = 640           # a contact-sheet cell is ~300px wide; 640 covers retina
+
+
 def data_uri(rel):
+    """A cell-sized thumbnail, inlined.
+
+    The plates are 2432px wide, and inlining 24 of them at full size makes a
+    ~190MB page that no browser opens twice. A contact sheet is for reading the
+    sequence, not the grain, so the art is downscaled to cell size first. Without
+    Pillow the full plate is inlined as before -- correct, just heavy."""
     p = ROOT / rel
     if not p.exists():
         return None
-    mime = mimetypes.guess_type(p.name)[0] or "image/png"
-    return f"data:{mime};base64," + base64.b64encode(p.read_bytes()).decode()
+    try:
+        import io
+        from PIL import Image
+        im = Image.open(p)
+        if im.width > THUMB_W:
+            im = im.resize((THUMB_W, round(im.height * THUMB_W / im.width)),
+                           Image.LANCZOS)
+        buf = io.BytesIO()
+        im.convert("RGB").save(buf, "JPEG", quality=82, optimize=True)
+        return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
+    except ImportError:
+        mime = mimetypes.guess_type(p.name)[0] or "image/png"
+        return f"data:{mime};base64," + base64.b64encode(p.read_bytes()).decode()
 
 
 CSS = """

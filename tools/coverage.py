@@ -26,8 +26,8 @@ GRAMMAR = (1, 4, 9)      # panels per page the template permits
 
 ALIASES = {
     "walt": ["walt", "he ", "his ", "him "],
-    "visitor": ["visitor", "alien"],
-    "band": ["band", "bracelet"],
+    "visitor": ["visitor", "alien", "non-human"],
+    "band": ["band", "bracelet", "cuff"],
     "keeper": ["keeper", "presence"],
     "kept": ["the kept", "beings"],
     "ship": ["ship"],
@@ -115,7 +115,14 @@ def main():
 
     # ---- 3. can a child follow the pictures? -----------------------------------
     out += ["## 3. Could a child follow the pictures alone?", ""]
-    order = [(b["art"], panels[b["art"]]) for b in flat if b["art"] and b["art"] in panels]
+    # A panel can carry more than one paragraph, and then it is anchored more than
+    # once -- but it is still one picture holding one slot. Counting it twice would
+    # paginate a book that does not exist, so first anchor wins and the rest are
+    # extra captions on the same frame. Keep this in step with pages.panel_order.
+    _seen = set()
+    order = [(b["art"], panels[b["art"]]) for b in flat
+             if b["art"] and b["art"] in panels
+             and not (b["art"] in _seen or _seen.add(b["art"]))]
     rows, no_actor_run, worst_run = [], 0, 0
     for pid, p in order:
         who = actors(p["prompt"], chars)
